@@ -1,0 +1,5078 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Oral Path 1 Midterm</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+    <style>
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu",
+          "Droid Sans", sans-serif, "Meiryo";
+        padding: 0 12px;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin-bottom: 24px;
+        width: 100%;
+      }
+      table > thead > tr > th,
+      table > tbody > tr > td {
+        padding: 5px 10px;
+      }
+      table > thead > tr > th {
+        text-align: left;
+        border-bottom: 1px solid;
+      }
+      table > tbody > tr + tr > td {
+        border-top: 1px solid;
+      }
+
+      .tooltip {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+      }
+      .tooltip img {
+        display: none;
+        position: absolute;
+        width: var(--tooltip-img-width, 300px);
+        height: auto;
+        border: 2px solid #f00;
+        background: #ffffcc;
+        padding: 5px;
+        z-index: 10;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(10px);
+        max-width: 90vw; /* ✅ prevents image from exceeding viewport width */
+        max-height: 80vh; /* ✅ keeps image inside visible page vertically */
+        object-fit: contain;
+        box-sizing: border-box;
+      }
+
+      .tooltip[data-position="below"] img {
+        bottom: auto;
+        top: 100%;
+      }
+
+      .tooltip:hover img {
+        display: block;
+        /* Reposition if too close to top or bottom of viewport */
+        top: auto;
+        bottom: auto;
+      }
+
+      .blurred {
+        filter: blur(3px);
+        transition: filter 0.3s ease;
+      }
+
+      table td:not(:first-child),
+      table td li {
+        cursor: pointer;
+      }
+
+      summary {
+        font-size: 22px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 16px 0;
+      }
+
+      details {
+        border: 2px solid #444;
+        border-radius: 8px;
+        padding: 10px;
+        background: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Protected Content</h2>
+    <p>Please enter the password to view the content:</p>
+    <input type="password" id="password" placeholder="Enter password" />
+    <button onclick="checkPassword()">Submit</button>
+    <div id="content" style="display: none; margin-top: 20px">
+      <!-- <div> -->
+      <div class="blur-buttons">
+        <button id="blurAll">Blur All (Press spacebar to blur)</button>
+        <button id="unblurAll">Unblur All (Press spacebar to unblue)</button>
+        <button
+          id="shuffleAllTables"
+          title="Shuffle each table's rows within its own details block"
+        >
+          Shuffle Tables (Press z to shuffle)
+        </button>
+        <button
+          id="resetTables"
+          title="Reset all tables to their original order"
+        >
+          Reset Tables (Press X to unshuffle)
+        </button>
+        <button id="toggleDetails">Expand/Collapse All (Press E)</button>
+      </div>
+      <br />
+      <details>
+        <summary>Lecture 1: Principles of Radiology Interpretations</summary>
+        <h1>
+          Foundational Principles and Objectives of Radiographic Interpretation
+        </h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Concept</th>
+              <th>Key Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Interpretation vs. Diagnosis</td>
+              <td>
+                <strong>Interpretation</strong> = explanation of what is viewed
+                on a dental radiograph; the ability to read what is revealed.
+                <strong>Diagnosis</strong> = identification of disease by
+                examination or analysis.
+              </td>
+            </tr>
+            <tr>
+              <td>Objectives of Radiographic Interpretation</td>
+              <td>
+                <ol>
+                  <li>
+                    <strong>Detection</strong> – presence or absence of disease.
+                  </li>
+                  <li>
+                    <strong>Description</strong> – providing information on
+                    disease according to a systematic approach.
+                  </li>
+                  <li>
+                    <strong>Differentiation</strong> – distinguishing diseases
+                    of similar radiographic appearance.
+                  </li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <td>Importance of Radiologic Interpretation</td>
+              <td>
+                Dentists must master two inseparable components of visual
+                diagnosis:
+                <ul>
+                  <li>
+                    <strong>Perception</strong> – recognizing abnormal patterns.
+                  </li>
+                  <li>
+                    <strong>Cognition</strong> – interpreting those patterns.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Clinical Examination and Radiograph Prescription</td>
+              <td>
+                Radiographs are prescribed when they offer useful diagnostic
+                information. Clinical signs, symptoms, and history indicate the
+                need for a radiological examination and should first be used to
+                select the type of radiographs.
+              </td>
+            </tr>
+            <tr>
+              <td>Acquiring Appropriate Diagnostic Images</td>
+              <td>
+                An insufficient number or inadequate quality of radiographs
+                limits diagnostic information. Inadequate radiographs must be
+                recognized, and supplemental images obtained before analysis.
+              </td>
+            </tr>
+            <tr>
+              <td>Essential Requirements for Interpretation</td>
+              <td>
+                <ul>
+                  <li>Optimum viewing conditions.</li>
+                  <li>Knowledge of expected radiographic appearance.</li>
+                  <li>
+                    Knowledge of normal anatomical landmarks and variations of
+                    normal.
+                  </li>
+                  <li>
+                    Knowledge of radiographic appearances of pathological
+                    maxillofacial conditions.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Quality of Diagnostic X-rays</td>
+              <td>
+                Conventional dental radiography produces 2-dimensional images,
+                usually mesiodistal. A view at right angles to the original film
+                plane is sometimes beneficial. Complete diagnostic imaging
+                before biopsy or treatment; it can help select an appropriate
+                biopsy site.
+              </td>
+            </tr>
+            <tr>
+              <td>Image Analysis – Systematic Approach</td>
+              <td>
+                First identify all normal anatomy. Learn normal anatomy by
+                identifying it in every image. Examine every aspect
+                systematically rather than focusing on one region; more than one
+                abnormality may be present.
+              </td>
+            </tr>
+            <tr>
+              <td>Intraoral Imaging</td>
+              <td>
+                Periapical and bitewing radiographs evaluate the crown, root,
+                pulp, PDL space, and lamina dura. Examine both jaws, bone
+                quality and trabecular pattern, teeth, and restorations.
+              </td>
+            </tr>
+            <tr>
+              <td>Extraoral Radiography</td>
+              <td>
+                Common dental extraoral studies include panoramic images,
+                cephalometric views, and TMJ examinations. For panoramic images,
+                review maxillary border, sinus floor, and zygomatic process. For
+                CBCT, review axial, coronal, and sagittal planes.
+              </td>
+            </tr>
+            <tr>
+              <td>Importance of Normal Anatomy Knowledge</td>
+              <td>
+                Recognizing normal variations is key to identifying
+                abnormalities, especially on panoramic images.
+              </td>
+            </tr>
+            <tr>
+              <td>Diagnostic Reasoning Process</td>
+              <td>
+                Differentiate normal from abnormal in 2-dimensional images, then
+                form a 3-dimensional mental representation including location,
+                size, internal structure, and effects on surrounding structures.
+              </td>
+            </tr>
+            <tr>
+              <td>Ineffective vs. Effective Strategy</td>
+              <td>
+                <strong>Ineffective:</strong> Memorizing abnormality features
+                without understanding mechanisms.
+                <strong>Effective:</strong> Understanding pathophysiology at
+                biochemical, cellular, tissue, and organ levels.
+              </td>
+            </tr>
+            <tr>
+              <td>Worth’s Principle</td>
+              <td>
+                Radiographic appearances are governed by anatomic and
+                physiologic changes in disease processes. Radiologic diagnosis
+                requires knowledge of these alterations and disease mechanisms.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h1>Systematic Analysis of Radiographic Abnormalities</h1>
+        <h2>Step 1: Localise the Lesion</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Localised or Generalised?</td>
+              <td>
+                Many abnormalities are localised. If all osseous structures of
+                the maxillofacial region are affected, consider generalised
+                conditions such as metabolic or endocrine bone abnormalities.
+              </td>
+            </tr>
+            <tr>
+              <td>Unilateral or Bilateral?</td>
+              <td>
+                Variations of normal are more commonly bilateral; abnormalities
+                are more commonly unilateral. Exceptions include Paget’s disease
+                and cherubism, which are bilateral in the mandible.
+              </td>
+            </tr>
+            <tr>
+              <td>Position in the Jaws (Epicenter)</td>
+              <td>
+                The point of origin suggests tissue of origin:
+                <ul>
+                  <li>Coronal to a tooth: likely odontogenic epithelium.</li>
+                  <li>
+                    Above the inferior alveolar nerve canal: likely odontogenic
+                    tissue.
+                  </li>
+                  <li>
+                    Below the inferior alveolar nerve canal: unlikely
+                    odontogenic, such as a Stafne defect.
+                  </li>
+                  <li>
+                    Within the inferior alveolar nerve canal: likely neural or
+                    vascular origin.
+                  </li>
+                  <li>
+                    Condylar region: greater likelihood of cartilaginous lesions
+                    or osteochondromas.
+                  </li>
+                  <li>
+                    Within maxillary antrum: not odontogenic unless it grew into
+                    the antrum from the alveolar process.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Specific Location Predilections</td>
+              <td>
+                <ul>
+                  <li>
+                    Central giant cell granuloma: anterior to first molars in
+                    the mandible and anterior to the canine in the maxilla,
+                    usually in young patients.
+                  </li>
+                  <li>Osteomyelitis: usually mandible, rarely maxilla.</li>
+                  <li>
+                    Periapical cemental dysplasia: periapical tooth region.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Single or Multifocal?</td>
+              <td>
+                Possible multifocal abnormalities include periapical cemental
+                dysplasia, odontogenic keratocyst, metastatic lesions, multiple
+                myeloma, and leukemic infiltrates.
+              </td>
+            </tr>
+            <tr>
+              <td>Size</td>
+              <td>
+                Size may aid differential diagnosis; for example, a dentigerous
+                cyst is often larger than a hyperplastic follicle.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Step 2: Assess the Periphery and Shape</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Well-defined border</td>
+              <td>
+                An imaginary pencil can confidently trace lesion limits.
+                Suggests a slow-growing or benign process.
+              </td>
+            </tr>
+            <tr>
+              <td>Punched-out border</td>
+              <td>
+                Sharp boundary with no adjacent bone reaction. Seen in multiple
+                myeloma.
+              </td>
+            </tr>
+            <tr>
+              <td>Corticated margin</td>
+              <td>
+                Thin, fairly uniform radiopaque line of reactive bone at the
+                periphery. Seen in cysts.
+              </td>
+            </tr>
+            <tr>
+              <td>Sclerotic margin</td>
+              <td>
+                Wider radiopaque reactive border, usually uneven in width. Seen
+                in periapical cemental dysplasia.
+              </td>
+            </tr>
+            <tr>
+              <td>Soft tissue capsule</td>
+              <td>
+                A radiopaque lesion may have a radiolucent peripheral line
+                indicating a soft-tissue capsule. Seen in odontomas and
+                cementoblastomas.
+              </td>
+            </tr>
+            <tr>
+              <td>Ill-defined border – Blending</td>
+              <td>
+                Gradual transition between normal and abnormal trabeculae. Seen
+                in sclerosing osteitis and fibrous dysplasia.
+              </td>
+            </tr>
+            <tr>
+              <td>Ill-defined border – Invasive</td>
+              <td>
+                Associated with rapid growth and malignant lesions. Radiolucent
+                finger-like or bay-type extensions may occur at the periphery
+                with bone destruction.
+              </td>
+            </tr>
+            <tr>
+              <td>Shape</td>
+              <td>
+                <ul>
+                  <li>
+                    <strong>Circular:</strong> fluid-filled, hydraulic lesions
+                    such as cysts.
+                  </li>
+                  <li>
+                    <strong>Scalloped:</strong> contiguous arcs or semicircles;
+                    seen in odontogenic keratocysts, simple bone cysts, and some
+                    tumours.
+                  </li>
+                  <li>
+                    <strong>Other:</strong> irregular, inverted pear, or
+                    heart-shaped.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Step 3: Analyse the Internal Structure</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Examples and Patterns</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Totally radiolucent</td>
+              <td>Common in cysts.</td>
+            </tr>
+            <tr>
+              <td>Totally radiopaque</td>
+              <td>Observed in osteomas.</td>
+            </tr>
+            <tr>
+              <td>Mixed radiolucent-radiopaque</td>
+              <td>Calcified structures against a radiolucent backdrop.</td>
+            </tr>
+            <tr>
+              <td>Fibrous dysplasia</td>
+              <td>
+                Greater numbers of short, randomly oriented trabeculae;
+                orange-peel or ground-glass appearance.
+              </td>
+            </tr>
+            <tr>
+              <td>Septa</td>
+              <td>
+                Residual trapped bone forms strands or walls. Septa dividing a
+                lesion into at least two compartments indicate multilocularity.
+                <ul>
+                  <li>
+                    Ameloblastoma: curved septa and soap-bubble compartments.
+                  </li>
+                  <li>
+                    Central giant cell granuloma: wispy or granular faint
+                    septations.
+                  </li>
+                  <li>Odontogenic myxoma: straight thin septa.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Dystrophic calcification</td>
+              <td>
+                Occurs in damaged soft tissue. Calcified lymph nodes appear as
+                dense, cauliflower-like soft-tissue masses.
+              </td>
+            </tr>
+            <tr>
+              <td>Cementum</td>
+              <td>
+                Homogeneous, dense, amorphous structure, sometimes organized in
+                round or oval forms.
+              </td>
+            </tr>
+            <tr>
+              <td>Tooth structure</td>
+              <td>
+                Recognized by organization into enamel, dentin, and pulp
+                chambers; density exceeds surrounding bone.
+              </td>
+            </tr>
+            <tr>
+              <td>Relative radiodensity</td>
+              <td>
+                Least to most radiopaque:
+                <ol>
+                  <li>Air, fat, or gas</li>
+                  <li>Fluid</li>
+                  <li>Soft tissue</li>
+                  <li>Bone marrow</li>
+                  <li>Trabecular bone</li>
+                  <li>Cortical bone or dentin</li>
+                  <li>Enamel</li>
+                  <li>Metal</li>
+                </ol>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Step 4: Analyse the Effect on Surrounding Structures</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Structure</th>
+              <th>Effects and Interpretation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Teeth</td>
+              <td>
+                Slow-growing space-occupying lesions displace teeth. A lesion
+                above a crown may displace a tooth apically; a ramus lesion may
+                push teeth anteriorly. Lymphoma, leukemia, and Langerhans cell
+                histiocytosis may push developing teeth coronally.
+              </td>
+            </tr>
+            <tr>
+              <td>PDL Space and Lamina Dura</td>
+              <td>
+                Orthodontic movement widens the PDL space while maintaining the
+                lamina dura. Malignant lesions cause irregular PDL widening and
+                lamina dura destruction.
+              </td>
+            </tr>
+            <tr>
+              <td>Tooth Resorption</td>
+              <td>
+                Usually associated with chronic, slow-growing processes;
+                malignant tumours occasionally cause resorption.
+              </td>
+            </tr>
+            <tr>
+              <td>Surrounding Bone Density and Trabecular Pattern</td>
+              <td>
+                Reactive bone at the periphery, such as cortication or
+                sclerosis, suggests slow benign growth and osteoblastic
+                activity.
+              </td>
+            </tr>
+            <tr>
+              <td>Inferior Alveolar Nerve Canal and Mental Foramen</td>
+              <td>
+                <ul>
+                  <li>
+                    Superior displacement: strongly associated with fibrous
+                    dysplasia.
+                  </li>
+                  <li>
+                    Widening with preserved cortical boundary: benign vascular
+                    or neural lesion.
+                  </li>
+                  <li>
+                    Irregular widening with cortical destruction: malignant
+                    neoplasm growing along the canal.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Outer Cortical Bone and Periosteal Reactions</td>
+              <td>
+                Inflammatory exudate can lift periosteum and stimulate new bone.
+                Repeated lifting creates onion-skin pattern. Spiculated new bone
+                at right angles to cortex may occur with metastatic prostate
+                cancer or osteogenic sarcoma.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Step 5: Formulate a Radiographic Interpretation</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Decision</th>
+              <th>Key Questions and Guidance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Normal or Abnormal?</td>
+              <td>
+                Decide whether the finding is a variation of normal or an
+                abnormality. Variations of normal do not require treatment.
+              </td>
+            </tr>
+            <tr>
+              <td>Developmental or Acquired?</td>
+              <td>
+                Determine whether the finding developed during formation or
+                later. A short root may be developmental when the root canal is
+                not visible to the apex, versus external resorption when the
+                canal is visible to the apex and pulp chambers are wide at the
+                apex.
+              </td>
+            </tr>
+            <tr>
+              <td>Disease Classification</td>
+              <td>
+                Identify the most likely category: inflammation, cyst, benign or
+                malignant neoplasia, bone dysplasia, vascular or metabolic
+                disease, or trauma.
+              </td>
+            </tr>
+            <tr>
+              <td>How to Proceed</td>
+              <td>
+                Possible next steps include further imaging, biopsy,
+                observation, or treatment. Suspected malignancy requires
+                advanced imaging and biopsy; some benign lesions may be
+                observed.
+              </td>
+            </tr>
+            <tr>
+              <td>Integrating Clinical Information</td>
+              <td>
+                Use clinical information after narrowing radiographic
+                possibilities to avoid bias and refine the differential
+                diagnosis.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h1>Diagnostic Imaging Report Structure</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Section</th>
+              <th>Content</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>General Patient Information</td>
+              <td>
+                Patient name, age, sex, patient ID or registration number,
+                referring clinician if applicable, and report date.
+              </td>
+            </tr>
+            <tr>
+              <td>Imaging Procedure</td>
+              <td>
+                Summary of procedures performed and examination date. For CBCT,
+                include field of view, slice thickness, spacing, and image
+                quality.
+              </td>
+            </tr>
+            <tr>
+              <td>Clinical Information</td>
+              <td>
+                Optional brief summary of clinical findings and history supplied
+                by the referring clinician or examiner.
+              </td>
+            </tr>
+            <tr>
+              <td>Findings</td>
+              <td>
+                Objective observations only: anatomic location, lesion extent,
+                periphery and shape, internal structure, and effects on
+                surrounding structures. Do not include interpretation.
+              </td>
+            </tr>
+            <tr>
+              <td>Interpretation</td>
+              <td>
+                Explain the meaning of the findings, integrate clinical history
+                if available, and provide a diagnosis or limited differential
+                diagnosis.
+              </td>
+            </tr>
+            <tr>
+              <td>Recommendations</td>
+              <td>
+                Suggest further studies or treatment when applicable, such as
+                biopsy or follow-up imaging.
+              </td>
+            </tr>
+            <tr>
+              <td>Report Finalization</td>
+              <td>
+                Include the reporting clinician’s name and signature. Ensure
+                clarity, completeness, and a standardized professional format.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h1>Radiographic Interpretation Form</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Date Radiographs Taken</td>
+              <td>_________________________</td>
+            </tr>
+            <tr>
+              <td>Date of Initial Recordings</td>
+              <td>_________________________</td>
+            </tr>
+            <tr>
+              <td>Type of Radiographic Survey</td>
+              <td>_________________________</td>
+            </tr>
+            <tr>
+              <td>Student Number / Signature</td>
+              <td>_________________________</td>
+            </tr>
+            <tr>
+              <td>Faculty Signature</td>
+              <td>_________________________</td>
+            </tr>
+            <tr>
+              <td>Tooth Numbering</td>
+              <td>
+                <ul>
+                  <li>(D) Unerupted</li>
+                  <li>(X) Missing</li>
+                  <li>(+) Malposed</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Crown:Root Ratio</td>
+              <td>
+                <ul>
+                  <li>(–) 1:1</li>
+                  <li>(&lt;) Less than 1:1</li>
+                  <li>(&gt;) Greater than 1:1</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Calculus</td>
+              <td>
+                <ul>
+                  <li>(M) Mesial</li>
+                  <li>(D) Distal</li>
+                  <li>(s) Slight</li>
+                  <li>(m) Moderate</li>
+                  <li>(g) Gross</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Alveolar Bone Loss</td>
+              <td>
+                <ul>
+                  <li>(H) Horizontal</li>
+                  <li>(V) Vertical</li>
+                  <li>(F) Furcation</li>
+                  <li>(M) Mesial</li>
+                  <li>(D) Distal</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Periapical Abnormalities</td>
+              <td>
+                <ul>
+                  <li>(W) Widened PDL Space</li>
+                  <li>(RO) Rarefying Osteitis</li>
+                  <li>(SO) Sclerosing Osteitis</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Apical Seal</td>
+              <td>
+                Distance from apical seal to radiographic apex:
+                <ul>
+                  <li>(A) Within 1.5–2.0 mm</li>
+                  <li>(Ux) Underextended</li>
+                  <li>(Ox) Overextended</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Obturation</td>
+              <td>
+                <ul>
+                  <li>(NV) No voids; dense obturation.</li>
+                  <li>
+                    (V) Voids; unacceptable, with many voids and nonuniform
+                    obturation.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Pulpal Abnormalities</td>
+              <td>
+                <ul>
+                  <li>(I) Increased Size</li>
+                  <li>(R) Reduced Size</li>
+                  <li>(St) Stone</li>
+                  <li>(CC) Calcified Canals</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Caries</td>
+              <td>
+                <ul>
+                  <li>(M) Mesial</li>
+                  <li>(D) Distal</li>
+                  <li>(C) Cervical</li>
+                  <li>(O) Occlusal</li>
+                  <li>(1, 2, 3, 4, 5) Radiographic scoring system</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Defective Restorations</td>
+              <td>
+                <ul>
+                  <li>(+) Overhang</li>
+                  <li>(–) Submargin</li>
+                  <li>(OM) Open Margin</li>
+                  <li>(PC) Poor Contours</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Occlusal Findings</td>
+              <td>
+                <ul>
+                  <li>(E) Even incisal edges or cusp tips</li>
+                  <li>(Ue) Uneven incisal edges or cusp tips</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Comments (Body of Maxilla and Mandible)</td>
+              <td>Space for additional observations.</td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+      <br />
+      <details>
+        <summary>Lecture 2: Dental Caries and Periodontal Diseases</summary>
+        <h1>
+          Dental Caries &amp; Periodontal Diseases — Comprehensive Study Notes
+        </h1>
+
+        <h2>Dental Caries — Disease Mechanism</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Etiology</td>
+              <td>
+                Multifactorial: involves the tooth, dental biofilm, and diet;
+                influenced by saliva, fluoride exposure, immune system,
+                bacterial exposure duration, and socioeconomic status.
+              </td>
+            </tr>
+            <tr>
+              <td>Role of Streptococcus mutans</td>
+              <td>
+                Ferments dietary sugars, especially fructose, producing lactic
+                acid that lowers pH and causes demineralization.
+              </td>
+            </tr>
+            <tr>
+              <td>Demineralization process</td>
+              <td>
+                Begins beneath the enamel surface and leaves a thin intact
+                surface layer. It involves cycles of demineralization and
+                remineralization.
+              </td>
+            </tr>
+            <tr>
+              <td>Modifying the cycle</td>
+              <td>
+                <ul>
+                  <li>Reduce sugar intake.</li>
+                  <li>Improve oral hygiene.</li>
+                  <li>Use topical fluoride.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Clinical presentation</td>
+              <td>
+                <ul>
+                  <li>Early lesion: white, chalky appearance.</li>
+                  <li>Arrested lesion: dark brown or black appearance.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Key rate difference</td>
+              <td>Dentin demineralizes faster than enamel.</td>
+            </tr>
+            <tr>
+              <td>Progression endpoint</td>
+              <td>Can lead to pulp necrosis.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Role of Imaging in Caries Detection</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Topic</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Clinical limitations</td>
+              <td>
+                Occlusal and smooth-surface caries may be visible; interproximal
+                caries are often missed unless cavitated.
+              </td>
+            </tr>
+            <tr>
+              <td>Preferred imaging for interproximal caries</td>
+              <td>Intraoral bitewing radiographs.</td>
+            </tr>
+            <tr>
+              <td>Panoramic images</td>
+              <td>Low resolution; not ideal for caries detection.</td>
+            </tr>
+            <tr>
+              <td>Radiographic appearance</td>
+              <td>
+                Demineralized areas are radiolucent. A single image cannot
+                distinguish active from arrested lesions.
+              </td>
+            </tr>
+            <tr>
+              <td>Extraoral bitewings</td>
+              <td>
+                An alternative for gag reflex, disabilities, or anatomical
+                constraints, but less reliable than intraoral bitewings.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Imaging Intervals by Caries Risk</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Risk Level</th>
+              <th>Children</th>
+              <th>Adolescents</th>
+              <th>Adults</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>High risk</td>
+              <td>6–12 months</td>
+              <td>—</td>
+              <td>6–18 months</td>
+            </tr>
+            <tr>
+              <td>Low risk</td>
+              <td>12–24 months</td>
+              <td>18–36 months</td>
+              <td>24–36 months</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Intraoral Imaging — Digital Sensors vs. Film</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Modality</th>
+              <th>Types</th>
+              <th>Advantages</th>
+              <th>Challenges / Cautions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Digital sensors</td>
+              <td>
+                Solid-state (CMOS); photostimulable phosphor plates (PSP).
+              </td>
+              <td>
+                Immediate acquisition; sensitivity equivalent to film for most
+                caries; PSP is similar in size to film and easier to place.
+              </td>
+              <td>
+                Solid-state sensors may be bulky and uncomfortable; smaller
+                active area may require multiple images; use a high-quality
+                monitor and subdued lighting.
+              </td>
+            </tr>
+            <tr>
+              <td>Intraoral film</td>
+              <td>
+                ANSI size 2 for adolescents/adults; ANSI size 0 or 1 for
+                children.
+              </td>
+              <td>Familiar technique.</td>
+              <td>
+                Mount with dark borders; view on a light box with magnification
+                and subdued lighting. Avoid ANSI size 3 film because bending
+                causes distortion.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Caries Detection by Surface Type</h2>
+        <h3>Proximal Surfaces</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Enamel caries shape</td>
+              <td>
+                Classic triangular radiolucency with base at the surface and tip
+                at the DEJ; may also appear as a band, rectangle, or
+                semicircular notch.
+              </td>
+            </tr>
+            <tr>
+              <td>Dentin involvement</td>
+              <td>
+                Second triangle with base at the DEJ and tip toward pulp; more
+                aggressive because dentin has lower mineral content.
+              </td>
+            </tr>
+            <tr>
+              <td>Common location</td>
+              <td>Between contact points to near the gingival margin.</td>
+            </tr>
+            <tr>
+              <td>Critical distinction</td>
+              <td>Must be differentiated from cervical burnout.</td>
+            </tr>
+            <tr>
+              <td>Radiographic limitation</td>
+              <td>
+                About 35% of mineral content must be lost for visibility; true
+                depth is greater than the radiographic appearance.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Occlusal Surfaces</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Population affected</td>
+              <td>Common in children and adolescents.</td>
+            </tr>
+            <tr>
+              <td>Radiographic detection</td>
+              <td>
+                Difficult in enamel; usually visible after reaching dentin as a
+                semicircular shape at the DEJ.
+              </td>
+            </tr>
+            <tr>
+              <td>Clinical signs</td>
+              <td>
+                New lesions are chalky white; older lesions may be brown or
+                black.
+              </td>
+            </tr>
+            <tr>
+              <td>Role of imaging</td>
+              <td>Assesses depth rather than early detection.</td>
+            </tr>
+            <tr>
+              <td>False negatives</td>
+              <td>Common because of enamel superimposition.</td>
+            </tr>
+            <tr>
+              <td>Mach-band effect</td>
+              <td>
+                Optical illusion at the DEJ from enamel-dentin contrast. Mask
+                enamel: if the band disappears, no caries; if it remains, caries
+                is more likely. Monitor suspicious areas without clinical signs.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Buccal, Lingual, and Root Surface Caries</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Buccal/lingual caries</td>
+              <td>
+                Circular or oval and well-defined; use tube-shift technique to
+                localize on radiographs.
+              </td>
+            </tr>
+            <tr>
+              <td>Root caries</td>
+              <td>
+                Common with gingival recession or bone loss; thin cementum
+                permits rapid progression.
+              </td>
+            </tr>
+            <tr>
+              <td>Differentiation</td>
+              <td>
+                Differentiate from cervical burnout with clinical examination
+                and bone-level assessment.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Cervical Burnout vs. Cervical Caries</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Cervical Burnout</th>
+              <th>Cervical Caries</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Appearance</td>
+              <td>Diffuse radiolucent band near the CEJ.</td>
+              <td>Well-defined radiolucent lesion.</td>
+            </tr>
+            <tr>
+              <td>Borders</td>
+              <td>Gradual, less-defined edges.</td>
+              <td>Sharp, irregular borders.</td>
+            </tr>
+            <tr>
+              <td>Root outline</td>
+              <td>Remains visible.</td>
+              <td>May be obscured.</td>
+            </tr>
+            <tr>
+              <td>Associated conditions</td>
+              <td>Normal bone height.</td>
+              <td>Often bone loss or gingival recession.</td>
+            </tr>
+            <tr>
+              <td>Effect of angulation</td>
+              <td>Changes with horizontal angulation.</td>
+              <td>Remains consistent with angulation.</td>
+            </tr>
+            <tr>
+              <td>Causes</td>
+              <td>
+                Thin root structure at CEJ, lack of bone coverage, and X-ray
+                attenuation differences.
+              </td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Common in</td>
+              <td>
+                Single-rooted teeth with concavities and multi-rooted teeth with
+                root overlap.
+              </td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Avoiding misdiagnosis</td>
+              <td>
+                Identify PDL spaces, adjust horizontal angulation, and use
+                clinical experience.
+              </td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>False-Positive Interpretations</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Observer variability</td>
+              <td>Less than 100% agreement in caries diagnosis.</td>
+            </tr>
+            <tr>
+              <td>Common causes</td>
+              <td>
+                Cervical burnout, overlapping proximal surfaces, and
+                inexperience.
+              </td>
+            </tr>
+            <tr>
+              <td>Prevention</td>
+              <td>
+                Proper training, correct X-ray beam angulation, and high-quality
+                images.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Caries Staging — ICDAS/ICCMS System</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Category</th>
+              <th>Radiographic Criteria</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td>Sound surface</td>
+              <td>No caries.</td>
+            </tr>
+            <tr>
+              <td>RA (RA1–RA3)</td>
+              <td>Initial stage</td>
+              <td>
+                RA1: outer enamel; RA2: inner enamel ± DEJ; RA3: outer third of
+                dentin.
+              </td>
+            </tr>
+            <tr>
+              <td>RB (RB4)</td>
+              <td>Moderate stage</td>
+              <td>Middle third of dentin.</td>
+            </tr>
+            <tr>
+              <td>RC (RC5–RC6)</td>
+              <td>Extensive stage</td>
+              <td>Inner third or pulp with cavitation.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Treatment Considerations</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Determinants</td>
+              <td>Caries risk status, lesion depth, and cavitation.</td>
+            </tr>
+            <tr>
+              <td>Non-surgical management</td>
+              <td>
+                For ICCMS RA stage lesions in enamel or outer third of dentin:
+                oral hygiene instruction and topical fluoride.
+              </td>
+            </tr>
+            <tr>
+              <td>Surgical management</td>
+              <td>
+                For cavitated lesions and lesions in the middle third of dentin
+                (RB stage) or deeper.
+              </td>
+            </tr>
+            <tr>
+              <td>Follow-up strategy</td>
+              <td>
+                Schedule imaging by caries risk. Match new images to original
+                images; progression indicates activity and may require surgery.
+              </td>
+            </tr>
+            <tr>
+              <td>Global treatment framework</td>
+              <td>
+                <ul>
+                  <li>
+                    Enamel-only: fluoride, hygiene, and diet modification.
+                  </li>
+                  <li>Early dentin: may or may not need restoration.</li>
+                  <li>
+                    Deep dentin or cavitated: surgical removal and restoration.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Rampant Caries and Restorative Caries</h2>
+        <h3>Rampant Caries</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Population</th>
+              <th>Causes</th>
+              <th>Characteristics</th>
+              <th>Prevention</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Children</td>
+              <td>Poor hygiene; sugary drinks, including bedtime bottles.</td>
+              <td>
+                Rapid widespread decay on smooth surfaces near cervical areas.
+              </td>
+              <td>Fluoride and saliva substitutes.</td>
+            </tr>
+            <tr>
+              <td>Adults</td>
+              <td>Xerostomia, including after radiation therapy.</td>
+              <td>Rapid widespread decay.</td>
+              <td>Fluoride and saliva substitutes.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Caries Associated with Dental Restorations</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Definition</th>
+              <th>Radiographic Appearance / Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Recurrent (secondary) caries</td>
+              <td>New demineralization at a restoration margin.</td>
+              <td>
+                Due to defective restorations or poor hygiene; radiolucency at
+                restoration-tooth interface.
+              </td>
+            </tr>
+            <tr>
+              <td>Residual caries</td>
+              <td>
+                Unremoved carious tissue left intentionally or unintentionally.
+              </td>
+              <td>Often part of an indirect pulp-capping strategy.</td>
+            </tr>
+            <tr>
+              <td>Imaging challenges</td>
+              <td>Improper angulation may mask lesions.</td>
+              <td>
+                Use bitewings with correct vertical angulation; consider a
+                second angle.
+              </td>
+            </tr>
+            <tr>
+              <td>Material confusion</td>
+              <td>Radiolucent liners or bases may mimic caries.</td>
+              <td>
+                Older composites can appear carious but have well-defined
+                borders.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Alternative Diagnostic Tools</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>Application</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Light-induced fluorescence</td>
+              <td>Detects demineralization on smooth surfaces.</td>
+            </tr>
+            <tr>
+              <td>Lasers, transillumination, electrical conductance</td>
+              <td>Used for occlusal and interproximal surfaces.</td>
+            </tr>
+            <tr>
+              <td>AI in dentistry</td>
+              <td>
+                Can enhance accuracy but should complement, not replace,
+                clinical judgment.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Periodontal Diseases — Overview and Mechanism</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Periodontium</td>
+              <td>
+                Gingiva, periodontal ligament (PDL), cementum, and alveolar
+                bone.
+              </td>
+            </tr>
+            <tr>
+              <td>Definition</td>
+              <td>
+                Inflammatory conditions affecting tooth-supporting structures.
+              </td>
+            </tr>
+            <tr>
+              <td>Consequence if untreated</td>
+              <td>Bone loss, soft-tissue damage, and tooth loss.</td>
+            </tr>
+            <tr>
+              <td>Prevalence</td>
+              <td>About 42% of U.S. adults aged 30–79 have periodontitis.</td>
+            </tr>
+            <tr>
+              <td>Risk groups</td>
+              <td>Older adults and lower socioeconomic groups.</td>
+            </tr>
+            <tr>
+              <td>Initiation</td>
+              <td>Dental plaque biofilm.</td>
+            </tr>
+            <tr>
+              <td>Key bacteria</td>
+              <td>Gram-negative rods and spirochetes.</td>
+            </tr>
+            <tr>
+              <td>Pathogenesis</td>
+              <td>
+                Bacterial toxins and host inflammatory response cause tissue
+                destruction, bone resorption, and pocket formation.
+              </td>
+            </tr>
+            <tr>
+              <td>Disease progression</td>
+              <td>Occurs in bursts with active and quiescent phases.</td>
+            </tr>
+            <tr>
+              <td>Modifying factors</td>
+              <td>Age, stress, smoking, hormones, and systemic disease.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Clinical Signs</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Condition</th>
+              <th>Signs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gingivitis</td>
+              <td>Swelling, redness, and bleeding.</td>
+            </tr>
+            <tr>
+              <td>Periodontitis</td>
+              <td>
+                Pocket formation, gingival recession, clinical attachment loss,
+                tooth mobility, bleeding on probing, and pus.
+              </td>
+            </tr>
+            <tr>
+              <td>Key note</td>
+              <td>
+                Often painless, so patients may be unaware until advanced
+                stages.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Radiographic Assessment of Periodontal Conditions</h2>
+        <h3>Features Evaluated</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Specific Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bone assessment</td>
+              <td>
+                Amount of bone, alveolar crests, furcation bone loss, and
+                PDL-space width.
+              </td>
+            </tr>
+            <tr>
+              <td>Local irritating factors</td>
+              <td>
+                Calculus and poorly contoured or overextended restorations.
+              </td>
+            </tr>
+            <tr>
+              <td>Root assessment</td>
+              <td>Root length, morphology, and crown-to-root ratio.</td>
+            </tr>
+            <tr>
+              <td>Interproximal factors</td>
+              <td>Open contacts that allow food impaction.</td>
+            </tr>
+            <tr>
+              <td>Anatomic considerations</td>
+              <td>
+                Root proximity; maxillary sinus and mental foramen position
+                relative to periodontal defects.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Imaging Modalities</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Modality</th>
+              <th>Role / Characteristics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Intraoral imaging</td>
+              <td>
+                Highest spatial resolution for subtle PDL, lamina dura, and
+                early bone-loss changes.
+              </td>
+            </tr>
+            <tr>
+              <td>Bitewings</td>
+              <td>
+                Best for CEJ-to-alveolar crest distance; use vertical bitewings
+                with significant bone loss.
+              </td>
+            </tr>
+            <tr>
+              <td>Periapical images</td>
+              <td>
+                Show full tooth length but may distort CEJ-crest relationship,
+                especially in the maxilla.
+              </td>
+            </tr>
+            <tr>
+              <td>Panoramic imaging</td>
+              <td>
+                Quick full-jaw overview, but lower resolution, distortion, and
+                superimposition; not primary for periodontal diagnosis.
+              </td>
+            </tr>
+            <tr>
+              <td>Extraoral bitewings</td>
+              <td>
+                Available on some panoramic systems, but evidence does not
+                support periodontal assessment use.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Limitations of Intraoral Imaging</h3>
+        <ul>
+          <li>2D imaging does not clearly show buccal or lingual defects.</li>
+          <li>Superimposition may obscure crestal bone.</li>
+          <li>Bone loss is underestimated.</li>
+          <li>Soft tissue and pocket depth cannot be assessed.</li>
+          <li>
+            The CEJ is not a reliable reference in supraeruption or attrition.
+          </li>
+        </ul>
+
+        <h2>CBCT in Periodontal Assessment</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Advantages</td>
+              <td>
+                3D osseous visualization without superimposition; improved
+                evaluation of vertical defects, furcations, buccal/lingual bone
+                loss, root morphology, fenestrations, and periapical disease.
+              </td>
+            </tr>
+            <tr>
+              <td>Limitations</td>
+              <td>
+                Metal artifacts, higher cost, radiation dose, and time; not
+                routinely recommended.
+              </td>
+            </tr>
+            <tr>
+              <td>Indications</td>
+              <td>
+                Small-volume, high-resolution CBCT for surgical planning or
+                complex bony lesions.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Normal Radiographic Anatomy of the Periodontium</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Structure</th>
+              <th>Normal Appearance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alveolar crest</td>
+              <td>Radiopaque cortical bone 0.5–2.0 mm apical to the CEJ.</td>
+            </tr>
+            <tr>
+              <td>Posterior teeth</td>
+              <td>Crest parallels the CEJ line.</td>
+            </tr>
+            <tr>
+              <td>Anterior teeth</td>
+              <td>Crest appears peak-like.</td>
+            </tr>
+            <tr>
+              <td>PDL space</td>
+              <td>
+                Thin and uniform; may widen near the cervical root in youth.
+              </td>
+            </tr>
+            <tr>
+              <td>Variations</td>
+              <td>Thin crests or radiolucency may be normal.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Radiographic Features of Periodontal Disease</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Condition</th>
+              <th>Radiographic Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gingivitis</td>
+              <td>No radiographic bone changes.</td>
+            </tr>
+            <tr>
+              <td>Periodontitis: morphologic changes</td>
+              <td>Loss of interproximal bone and cortical plate.</td>
+            </tr>
+            <tr>
+              <td>Periodontitis: trabecular changes</td>
+              <td>
+                Rarefaction increases radiolucency; sclerosis increases
+                radiopacity.
+              </td>
+            </tr>
+            <tr>
+              <td>Acute vs. chronic</td>
+              <td>
+                Acute disease causes bone loss; chronic disease may show
+                sclerosis plus loss.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Early and Horizontal Bone Loss</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Pattern</th>
+              <th>Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Early signs</td>
+              <td>
+                Blunting of anterior crests, rounding between posterior crest
+                and lamina dura, and diffuse cortical edge.
+              </td>
+            </tr>
+            <tr>
+              <td>Horizontal bone loss</td>
+              <td>
+                Bone crest remains parallel to the CEJ line; severity is based
+                on root-length relationship.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Severity</th>
+              <th>Bone Level Relative to Root Length</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mild</td>
+              <td>Within coronal 15%.</td>
+            </tr>
+            <tr>
+              <td>Moderate</td>
+              <td>15–33%.</td>
+            </tr>
+            <tr>
+              <td>Severe</td>
+              <td>Beyond 33%.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Advanced Bone Loss Patterns</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Pattern</th>
+              <th>Description</th>
+              <th>Key Radiographic Signs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Vertical (angular) defects</td>
+              <td>V-shaped bone loss along root surface.</td>
+              <td>
+                Oblique to CEJ line; early widened PDL at crest; classified by
+                remaining bony walls.
+              </td>
+            </tr>
+            <tr>
+              <td>Interdental craters</td>
+              <td>Two-walled defects between adjacent teeth.</td>
+              <td>Band-like crestal radiolucency; common in posterior jaws.</td>
+            </tr>
+            <tr>
+              <td>Cortical plate loss</td>
+              <td>Loss of buccal or lingual cortical plate.</td>
+              <td>
+                Semicircular radiolucency near crest; difficult to detect
+                without interproximal loss.
+              </td>
+            </tr>
+            <tr>
+              <td>Furcation involvement</td>
+              <td>Bone loss into molar furcations.</td>
+              <td>
+                More visible in mandibular molars; palatal root may obscure
+                maxillary defects. Widened furcation PDL or radiolucent
+                triangle/inverted J-shape may be present.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Vertical Defect Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3-walled</td>
+              <td>Buccal and lingual plates intact.</td>
+            </tr>
+            <tr>
+              <td>2-walled</td>
+              <td>One plate lost.</td>
+            </tr>
+            <tr>
+              <td>1-walled</td>
+              <td>Both plates lost.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Gutta-percha tracing or CBCT may aid visualization. CBCT is not
+          routine and is reserved for complex cases.
+        </p>
+        <p>Periodontal attachment loss can only be evaluated clinically.</p>
+
+        <h2>Bone Density and Trabecular Pattern Changes</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Change Type</th>
+              <th>Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Radiolucent changes</td>
+              <td>
+                Loss of trabecular density; faint or invisible trabeculae in
+                early or acute inflammation; may remineralize after successful
+                treatment.
+              </td>
+            </tr>
+            <tr>
+              <td>Radiopaque changes</td>
+              <td>
+                Thickened trabeculae and increased radiopacity; may become
+                amorphous in severe cases; sclerosis may extend to mandibular
+                cortex or sinus floor.
+              </td>
+            </tr>
+            <tr>
+              <td>Other findings</td>
+              <td>
+                Maxillary sinus mucositis from inflammatory spread; rare
+                periosteal reactions in adjacent bone.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Classification of Periodontal Diseases</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Basis</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tissue involvement</td>
+              <td>Gingiva versus bone.</td>
+            </tr>
+            <tr>
+              <td>Staging</td>
+              <td>Severity and complexity.</td>
+            </tr>
+            <tr>
+              <td>Grading</td>
+              <td>Progression rate and risk.</td>
+            </tr>
+            <tr>
+              <td>Systemic associations</td>
+              <td>Related systemic conditions.</td>
+            </tr>
+            <tr>
+              <td>Gingivitis vs. periodontitis</td>
+              <td>
+                Gingivitis affects gingiva only; periodontitis includes
+                attachment and bone loss. Gingivitis precedes periodontitis but
+                does not always progress.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Subcategories</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Periodontal health, gingival diseases and conditions</td>
+              <td>
+                <ul>
+                  <li>Periodontal health and gingival health.</li>
+                  <li>Dental biofilm-induced gingivitis.</li>
+                  <li>Nondental biofilm-induced gingival diseases.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>2. Periodontitis</td>
+              <td>
+                <ul>
+                  <li>Necrotizing periodontal diseases.</li>
+                  <li>
+                    Periodontitis: stages, extent/distribution, and grades.
+                  </li>
+                  <li>Periodontitis as a manifestation of systemic disease.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>3. Other conditions affecting the periodontium</td>
+              <td>
+                <ul>
+                  <li>Systemic diseases affecting periodontal support.</li>
+                  <li>
+                    Periodontal abscesses and endodontic-periodontic lesions.
+                  </li>
+                  <li>Mucogingival deformities and conditions.</li>
+                  <li>Traumatic occlusal forces.</li>
+                  <li>Tooth- and prosthesis-related factors.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Periodontitis Staging</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Stage I</th>
+              <th>Stage II</th>
+              <th>Stage III</th>
+              <th>Stage IV</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Radiographic bone loss</td>
+              <td>Coronal third of root, less than 15%.</td>
+              <td>Coronal third of root, 15–33%.</td>
+              <td>Middle third of root and beyond.</td>
+              <td>Middle third of root and beyond.</td>
+            </tr>
+            <tr>
+              <td>Complexity</td>
+              <td>Local.</td>
+              <td>
+                Maximum probing depth 4 mm or less; mostly horizontal loss.
+              </td>
+              <td>
+                Maximum probing depth 5 mm or less; mostly horizontal loss.
+              </td>
+              <td>
+                Stage II complexity and probing depth 6 mm or more; vertical
+                bone loss 3 mm or more; Class II/III furcation; moderate ridge
+                defect.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Extent and distribution</td>
+              <td>Localized, generalized, or molar-incisor distribution.</td>
+            </tr>
+            <tr>
+              <td>Grades</td>
+              <td>
+                Grade A: slow; Grade B: moderate; Grade C: rapid progression.
+              </td>
+            </tr>
+            <tr>
+              <td>Grade modifiers</td>
+              <td>
+                Diabetes mellitus has a bidirectional relationship; smoking
+                alters microflora and impairs immunity.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>
+          Necrotizing and Systemic Disease-Associated Periodontal Diseases
+        </h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Condition</th>
+              <th>Key Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Necrotizing periodontal diseases</td>
+              <td>
+                Severe pain, fever, ulceration, and necrosis. Risk factors
+                include HIV, malnutrition, stress, and smoking.
+              </td>
+            </tr>
+            <tr>
+              <td>Systemic disease-associated periodontitis</td>
+              <td>
+                Associated with leukemia, neutropenia, Down syndrome, and
+                Papillon-Lefèvre syndrome; often related to immune dysfunction
+                or connective-tissue defects.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Other Conditions Affecting the Periodontium</h2>
+        <h3>Periodontal Abscess</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Acute phase</td>
+              <td>Radiographic features may be absent.</td>
+            </tr>
+            <tr>
+              <td>Chronic abscess</td>
+              <td>
+                Radiolucency superimposed over root, loss of lamina dura at root
+                surface, and possible bone bridge separating lesion from
+                alveolar crest.
+              </td>
+            </tr>
+            <tr>
+              <td>Healing</td>
+              <td>Bone may regenerate after treatment.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Endodontic-Periodontic Lesions</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Origin</th>
+              <th>Pathway</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Periodontal origin</td>
+              <td>
+                Periodontal lesion extends to apex, causing secondary pulpitis.
+              </td>
+            </tr>
+            <tr>
+              <td>Endodontic origin</td>
+              <td>
+                Periapical lesion extends coronally, causing retrograde
+                periodontitis.
+              </td>
+            </tr>
+            <tr>
+              <td>Radiographic appearance</td>
+              <td>
+                Deep angular defect extending to apex, possible periapical
+                rarefying osteitis, and funnel-shaped bone loss.
+              </td>
+            </tr>
+            <tr>
+              <td>Treatment</td>
+              <td>Both endodontic and periodontal therapy are required.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Occlusal Trauma, Tooth Mobility, and Local Factors</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Condition</th>
+              <th>Imaging Signs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Occlusal trauma</td>
+              <td>
+                Widened PDL, thickened lamina dura, bone loss, and
+                hypercementosis. It does not cause periodontitis but may
+                accelerate bone loss if disease is present.
+              </td>
+            </tr>
+            <tr>
+              <td>Tooth mobility in single-rooted teeth</td>
+              <td>
+                Hourglass-shaped socket; widened PDL at apex and furcation in
+                multi-rooted teeth; lamina dura may be broad and dense.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Factor</th>
+              <th>Consequence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Open contacts</td>
+              <td>Food impaction, localized inflammation, and bone loss.</td>
+            </tr>
+            <tr>
+              <td>Malalignment</td>
+              <td>
+                Tipped teeth and uneven marginal ridges do not directly cause
+                disease but hinder hygiene and promote plaque accumulation.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Local Irritating Factor</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Calculus</td>
+              <td>
+                Promotes plaque retention; common near mandibular incisors.
+              </td>
+            </tr>
+            <tr>
+              <td>Defective restorations</td>
+              <td>Overhangs and poor contours trap plaque.</td>
+            </tr>
+            <tr>
+              <td>Enamel pearls and cervical enamel projections</td>
+              <td>Common in furcations and disrupt attachment.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Evaluation of Therapy and Differential Diagnosis</h2>
+        <h3>Post-Treatment Imaging</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Signs of healing</td>
+              <td>Recortication, sclerosis, and remineralization.</td>
+            </tr>
+            <tr>
+              <td>Caveats</td>
+              <td>
+                Beam angulation and exposure affect interpretation. No visible
+                change does not mean no healing; clinical examination remains
+                essential.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Differential Diagnosis of Bone Loss</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Periodontal Bone Loss</th>
+              <th>Red Flags for Non-Periodontal Disease</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pattern</td>
+              <td>
+                Starts at alveolar crest and progresses apically; wider
+                coronally and tapering apically.
+              </td>
+              <td>
+                Isolated tooth mobility or irregular loss that does not follow
+                periodontal patterns.
+              </td>
+            </tr>
+            <tr>
+              <td>Borders</td>
+              <td>—</td>
+              <td>Ill-defined borders and no sclerosis.</td>
+            </tr>
+            <tr>
+              <td>Other pathology</td>
+              <td>—</td>
+              <td>
+                Squamous cell carcinoma: irregular PDL widening and lamina dura
+                destruction. Langerhans cell histiocytosis: floating teeth and
+                mid-root epicenter.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+      <br />
+      <details>
+        <summary>Lecture 3: Inflammatory Jaw Lesions</summary>
+        <h1>Overview and Pathophysiology of Jaw Inflammation</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Prevalence</td>
+              <td>Most common pathologic condition in the jaws</td>
+            </tr>
+            <tr>
+              <td>Pathway of Infection</td>
+              <td>
+                Teeth create direct pathways for pathogens and irritants to
+                enter bone.
+              </td>
+            </tr>
+            <tr>
+              <td>Body's Response</td>
+              <td>
+                Inflammation acts to eliminate pathogens and repair tissue.
+              </td>
+            </tr>
+            <tr>
+              <td>Bone Metabolism Balance</td>
+              <td>
+                Governed by osteoblastic bone formation versus osteoclastic bone
+                resorption.
+              </td>
+            </tr>
+            <tr>
+              <td>Influencing Factors</td>
+              <td>
+                Microbial pathogenicity, host immune response, vascularity, and
+                time.
+              </td>
+            </tr>
+            <tr>
+              <td>Spectrum Concept</td>
+              <td>
+                Inflammatory conditions form a spectrum with varied clinical and
+                radiologic features.
+              </td>
+            </tr>
+            <tr>
+              <td>Disease Progression Pathway</td>
+              <td>
+                <ul>
+                  <li>Caries or trauma</li>
+                  <li>Necrotic pulp</li>
+                  <li>Apical periodontitis</li>
+                  <li>Acute: periapical abscess, then osteomyelitis</li>
+                  <li>Chronic: periapical granuloma, then periapical cyst</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>General Clinical Features</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cardinal Signs of Inflammation</td>
+              <td>
+                <ul>
+                  <li>Redness (rubor)</li>
+                  <li>Heat (calor)</li>
+                  <li>Swelling (tumor)</li>
+                  <li>Pain (dolor)</li>
+                  <li>Loss of function (functio laesa)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Acute Lesions</td>
+              <td>
+                Rapid onset, intense pain, fever, and noticeable swelling.
+              </td>
+            </tr>
+            <tr>
+              <td>Chronic Lesions</td>
+              <td>
+                Slow progression, mild or dull pain, low-grade fever, and
+                gradual swelling.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h1>General Imaging Features of Jaw Inflammation</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Characteristics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Location (Pulpal origin)</td>
+              <td>Lesion epicenter at tooth apex or along root surface.</td>
+            </tr>
+            <tr>
+              <td>Location (Periodontal origin)</td>
+              <td>
+                Epicenter at alveolar crest; severe cases may involve furcation.
+              </td>
+            </tr>
+            <tr>
+              <td>Location (Osteomyelitis)</td>
+              <td>
+                Diffuse, uncontained inflammation; commonly in posterior
+                mandible.
+              </td>
+            </tr>
+            <tr>
+              <td>Periphery</td>
+              <td>
+                Ill-defined borders; gradual transition to sclerotic or
+                radiolucent patterns.
+              </td>
+            </tr>
+            <tr>
+              <td>Radiographic Appearance</td>
+              <td>Radiolucent, radiopaque, or mixed.</td>
+            </tr>
+            <tr>
+              <td>Acute Disease Progression</td>
+              <td>Bone resorption dominates, producing radiolucency.</td>
+            </tr>
+            <tr>
+              <td>Chronic Disease Progression</td>
+              <td>Bone formation increases, producing radiopacity.</td>
+            </tr>
+            <tr>
+              <td>Osteomyelitis on Imaging</td>
+              <td>
+                Sequestra; ill-defined radiolucent areas with radiopaque islands
+                of nonvital bone.
+              </td>
+            </tr>
+            <tr>
+              <td>Effects on Surrounding Structures</td>
+              <td>
+                <ul>
+                  <li>New bone formation produces sclerotic bone.</li>
+                  <li>Bone resorption produces radiolucent areas.</li>
+                  <li>PDL widening, commonly at apex and alveolar crest.</li>
+                  <li>Root resorption.</li>
+                  <li>Periosteal bone formation.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h1>Periapical Inflammatory Lesions</h1>
+        <h2>Terminology and Radiologic Diagnosis</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Terminology Type</th>
+              <th>Terms / Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Common Clinical Terms</td>
+              <td>Apical periodontitis, abscess, granuloma, cyst.</td>
+            </tr>
+            <tr>
+              <td>Histopathologic Diagnosis</td>
+              <td>
+                Only microscopic examination can differentiate abscess,
+                granuloma, and cyst.
+              </td>
+            </tr>
+            <tr>
+              <td>Radiologic Term: Rarefying Osteitis</td>
+              <td>Bone resorption producing radiolucency.</td>
+            </tr>
+            <tr>
+              <td>Radiologic Term: Sclerosing Osteitis</td>
+              <td>Bone deposition producing radiopacity.</td>
+            </tr>
+            <tr>
+              <td>Preferred Terminology</td>
+              <td>
+                Use “sclerosis” rather than “condensing/focal sclerosing
+                osteitis.”
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Disease Mechanism and Pathophysiology</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cause</td>
+              <td>Pulpal necrosis from caries, trauma, or chemicals.</td>
+            </tr>
+            <tr>
+              <td>Inflammatory Spread</td>
+              <td>From apex to surrounding bone and PDL.</td>
+            </tr>
+            <tr>
+              <td>Acute Progression</td>
+              <td>Abscess formation.</td>
+            </tr>
+            <tr>
+              <td>Chronic Progression</td>
+              <td>Granuloma or cyst formation.</td>
+            </tr>
+            <tr>
+              <td>Bone Response</td>
+              <td>
+                Sclerosis at lesion periphery, periosteal new bone formation,
+                and sequestrum formation due to compromised blood supply.
+              </td>
+            </tr>
+            <tr>
+              <td>Spread Pathway</td>
+              <td>
+                Inflammation spreads through bone via Haversian and Volkmann
+                canal systems. As it reaches the bone surface through Volkmann
+                canals, exudate lifts and distends the periosteum.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Clinical and Imaging Examinations</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Findings / Modalities</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Acute Clinical Presentation</td>
+              <td>Pain, swelling, mobility, and pus drainage.</td>
+            </tr>
+            <tr>
+              <td>Chronic Clinical Presentation</td>
+              <td>Asymptomatic or intermittent pain.</td>
+            </tr>
+            <tr>
+              <td>Imaging Modalities</td>
+              <td>
+                Periapical, occlusal, and panoramic images; CBCT/MDCT for bone
+                changes; MRI for marrow involvement; nuclear medicine (99mTc,
+                67Ga) for confirmation.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Imaging Features: Location and Periphery</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Characteristics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Location</td>
+              <td>
+                Typically at the apex or apical third of a tooth root; may
+                migrate apically as lesion enlarges; may occur at accessory
+                canals, perforations, or root fractures.
+              </td>
+            </tr>
+            <tr>
+              <td>Periphery</td>
+              <td>
+                Poorly to moderately defined borders with smooth contour.
+                Transition zone reflects degree of sclerosis; rarely corticated
+                or sharply defined.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Imaging Features: Internal Structure and Bone Effects</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Findings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Early Lesions</td>
+              <td>May show no visible changes.</td>
+            </tr>
+            <tr>
+              <td>Initial Signs</td>
+              <td>PDL widening and loss of lamina dura.</td>
+            </tr>
+            <tr>
+              <td>Advanced Lesions</td>
+              <td>Radiolucency at apex and possible sclerosis.</td>
+            </tr>
+            <tr>
+              <td>Bone Perforation</td>
+              <td>Through a cloaca.</td>
+            </tr>
+            <tr>
+              <td>Trabecular Changes</td>
+              <td>Altered trabecular pattern and marrow space.</td>
+            </tr>
+            <tr>
+              <td>Sequestrum Formation</td>
+              <td>
+                Dense bone with reduced vascularity produces a sequestrum.
+              </td>
+            </tr>
+            <tr>
+              <td>Periosteal New Bone Formation</td>
+              <td>“Halo” or “onion skin” patterns.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Effects on Adjacent Teeth and Air Spaces</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Structure Affected</th>
+              <th>Imaging/Clinical Findings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Root Effects</td>
+              <td>
+                External root resorption produces irregular root contour;
+                hypercementosis produces bulbous root shape; changes are
+                asymmetric and nonuniform.
+              </td>
+            </tr>
+            <tr>
+              <td>Air Space Involvement</td>
+              <td>
+                Inflammation may reach the sinus or nasal floor and stimulate
+                mucosal thickening (mucositis).
+              </td>
+            </tr>
+            <tr>
+              <td>Deciduous Teeth</td>
+              <td>
+                May disrupt eruption of permanent teeth and displace developing
+                dentition.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Differential Interpretation</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Condition</th>
+              <th>Key Distinguishing Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PCOD (Periapical Cemento-Osseous Dysplasia)</td>
+              <td>
+                Early radiolucent stage mimics inflammation; tooth is vital.
+                Mature stage shows central radiopacity within radiolucency. Root
+                changes are hypercementosis, not resorption.
+              </td>
+            </tr>
+            <tr>
+              <td>Periapical Inflammatory Disease</td>
+              <td>
+                Tooth is nonvital; radiopacity is at lesion periphery; root
+                changes are external resorption.
+              </td>
+            </tr>
+            <tr>
+              <td>Dense Bone Island</td>
+              <td>
+                May mimic sclerosis; no PDL space alteration, tooth remains
+                vital, and there is a narrow transition zone to normal bone.
+              </td>
+            </tr>
+            <tr>
+              <td>Malignancy (for example, leukemia)</td>
+              <td>
+                Rarely may involve apical PDL space; multiple areas of
+                cancellous bone destruction require further imaging and clinical
+                correlation.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Persistent Periapical Inflammatory Disease</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Causes of Persistence</td>
+              <td>
+                Inadequate endodontic treatment, untreated canal, root
+                perforation, or fracture.
+              </td>
+            </tr>
+            <tr>
+              <td>Imaging Clues</td>
+              <td>
+                Recurring radiolucency with hydraulic periphery; CBCT is useful
+                for identifying root fractures or missed canals.
+              </td>
+            </tr>
+            <tr>
+              <td>Management</td>
+              <td>
+                Retreatment or periapical surgery; extraction if root fracture
+                is confirmed.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h1>Osteomyelitis</h1>
+        <h2>Overview and Disease Mechanism</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Definition</td>
+              <td>Inflammation involving bone marrow.</td>
+            </tr>
+            <tr>
+              <td>Progression</td>
+              <td>More severe form of periapical inflammatory disease.</td>
+            </tr>
+            <tr>
+              <td>Risk Factors</td>
+              <td>
+                Immunosuppression, systemic disease, and poor vascularity.
+              </td>
+            </tr>
+            <tr>
+              <td>Mechanism of Spread</td>
+              <td>From a nonvital tooth or hematogenous origin.</td>
+            </tr>
+            <tr>
+              <td>Acute Histology</td>
+              <td>Neutrophilic infiltrate.</td>
+            </tr>
+            <tr>
+              <td>Chronic Histology</td>
+              <td>Fibrosis and mononuclear cells.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Clinical and Imaging Features</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Acute</th>
+              <th>Chronic</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Clinical Features</td>
+              <td>Pain, swelling, fever, lymphadenopathy, and paresthesia.</td>
+              <td>
+                Intermittent symptoms, fistula, and possible absence of
+                symptoms.
+              </td>
+            </tr>
+            <tr>
+              <td>Imaging Features</td>
+              <td>Sclerosis, cloaca, and periosteal new bone formation.</td>
+              <td>
+                Sequestra; “onion skin” or “proliferative periostitis” in
+                children.
+              </td>
+            </tr>
+            <tr>
+              <td>Imaging Modalities</td>
+              <td>
+                Periapical, panoramic, and occlusal images; CBCT/MDCT for bone
+                changes; MRI for marrow; 99mTc and 67Ga for inflammation.
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Location, Periphery and Progression</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Characteristics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Location</td>
+              <td>Most common in posterior mandible and rare in maxilla.</td>
+            </tr>
+            <tr>
+              <td>Periphery (Acute)</td>
+              <td>Poorly defined and noncorticated.</td>
+            </tr>
+            <tr>
+              <td>Periphery (Chronic)</td>
+              <td>Better defined with a sclerotic transition zone.</td>
+            </tr>
+            <tr>
+              <td>Progression</td>
+              <td>
+                Cortical bone resorption stimulates periosteum and creates new
+                bone layers; multiple “onion skin” layers may occur in children.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Internal Structure</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Phase</th>
+              <th>Imaging Findings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Acute Phase</td>
+              <td>
+                Decreased bone density, loss of trabecular definition, and focal
+                radiolucencies in scattered regions.
+              </td>
+            </tr>
+            <tr>
+              <td>Chronic Phase</td>
+              <td>Increased bone density producing uniform radiopacity.</td>
+            </tr>
+            <tr>
+              <td>Sequestra Appearance</td>
+              <td>
+                Radiopaque bone fragments surrounded by a radiolucent halo.
+              </td>
+            </tr>
+            <tr>
+              <td>Best Imaging Tools</td>
+              <td>
+                CBCT/MDCT are superior for detecting sequestra and dense bone
+                changes.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Effects on Surrounding Structures, Teeth and Soft Tissue</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Findings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Periosteal Reaction</td>
+              <td>
+                New bone forms in elevated periosteum; granular or sclerotic
+                bone pattern develops.
+              </td>
+            </tr>
+            <tr>
+              <td>Advanced Bone Changes</td>
+              <td>
+                Loss of original cortex visibility, bony asymmetry, surface
+                contour changes, and cloaca formation.
+              </td>
+            </tr>
+            <tr>
+              <td>Spread</td>
+              <td>
+                May involve TMJ, causing septic arthritis; may extend to mastoid
+                air cells and inner ear.
+              </td>
+            </tr>
+            <tr>
+              <td>Tooth Effects</td>
+              <td>
+                External root resorption, hypercementosis, and widened PDL space
+                against sclerotic bone.
+              </td>
+            </tr>
+            <tr>
+              <td>Soft Tissue Imaging (MDCT + contrast)</td>
+              <td>“Fat streaking.”</td>
+            </tr>
+            <tr>
+              <td>Soft Tissue Imaging (MRI + gadolinium)</td>
+              <td>
+                Edema, abscess, and lymphadenopathy; abscess has low attenuation
+                center with enhanced border.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Differential Diagnosis</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Condition</th>
+              <th>Distinguishing Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Osteomyelitis</td>
+              <td>
+                Periosteal new bone formation; sequestra present; cortex may be
+                indistinct in chronic phase.
+              </td>
+            </tr>
+            <tr>
+              <td>Fibrous Dysplasia</td>
+              <td>
+                Bone enlarges from within; cortex remains intact but thinned; no
+                sequestra.
+              </td>
+            </tr>
+            <tr>
+              <td>Key Differentiator</td>
+              <td>Location and origin of new bone formation.</td>
+            </tr>
+            <tr>
+              <td>Malignancy</td>
+              <td>
+                May mimic acute osteomyelitis and may be secondarily infected;
+                destruction of adjacent structures, soft tissue mass, and rapid
+                growth suggest malignancy.
+              </td>
+            </tr>
+            <tr>
+              <td>Langerhans Cell Histiocytosis</td>
+              <td>Radiolucent with no sclerosis.</td>
+            </tr>
+            <tr>
+              <td>Ewing Sarcoma</td>
+              <td>“Onion skin” periosteal reaction.</td>
+            </tr>
+            <tr>
+              <td>Osteosarcoma/Chondrosarcoma</td>
+              <td>Intralesional bone formation.</td>
+            </tr>
+            <tr>
+              <td>Paget Disease</td>
+              <td>Bilateral mandibular involvement and no sequestra.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Chronic Variants and Syndromic Mimics</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Condition</th>
+              <th>Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Chronic Osteomyelitis</td>
+              <td>
+                May evolve from acute phase; cultures may be negative in chronic
+                stage.
+              </td>
+            </tr>
+            <tr>
+              <td>Primary Chronic Osteomyelitis</td>
+              <td>
+                No identifiable pathogen; similar to CRMO and SAPHO syndrome.
+              </td>
+            </tr>
+            <tr>
+              <td>SAPHO Syndrome</td>
+              <td>
+                Synovitis, acne, pustulosis, hyperostosis, and osteitis; imaging
+                shows sclerosis and swelling with negative cultures.
+              </td>
+            </tr>
+            <tr>
+              <td>CRMO</td>
+              <td>
+                Chronic recurrent multifocal osteomyelitis: symmetric long-bone
+                involvement in children; nonpurulent and culture-negative. Jaw
+                involvement may be a unifocal variant.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Management</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Approach</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Acute</td>
+              <td>Remove source, antibiotics, and surgical drainage.</td>
+            </tr>
+            <tr>
+              <td>Chronic</td>
+              <td>May require sequestrectomy, decortication, or resection.</td>
+            </tr>
+            <tr>
+              <td>Antibiotic Limitations</td>
+              <td>Antibiotics have limited success in sclerotic bone.</td>
+            </tr>
+            <tr>
+              <td>Alternative Therapies</td>
+              <td>Steroids, NSAIDs, and bisphosphonates.</td>
+            </tr>
+            <tr>
+              <td>Additional Therapy</td>
+              <td>Hyperbaric oxygen therapy in select cases.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h1>Radiation-Induced Bone Changes and Osteoradionecrosis</h1>
+        <h2>Mechanism and Effects</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cause</td>
+              <td>Therapeutic radiation for head and neck malignancies.</td>
+            </tr>
+            <tr>
+              <td>Cellular Damage</td>
+              <td>
+                Damage to DNA, proteins, and lipids causes impaired cell
+                function or death.
+              </td>
+            </tr>
+            <tr>
+              <td>Low Dose (1–4 Gy)</td>
+              <td>Osteoblast stimulation and sclerosis.</td>
+            </tr>
+            <tr>
+              <td>Moderate Dose (10–20 Gy)</td>
+              <td>Cell death and growth retardation.</td>
+            </tr>
+            <tr>
+              <td>High Dose (60–70 Gy)</td>
+              <td>Mature bone damage.</td>
+            </tr>
+            <tr>
+              <td>Vascular Injury</td>
+              <td>Hypovascular, hypoxic bone with impaired healing.</td>
+            </tr>
+            <tr>
+              <td>Outcome</td>
+              <td>Osteoradionecrosis: bone death due to radiation.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Imaging Features and Differential Interpretation</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Findings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Early Imaging</td>
+              <td>No visible changes.</td>
+            </tr>
+            <tr>
+              <td>Later Imaging</td>
+              <td>
+                Cortical bone resorption, sclerosis, sequestra, uniform
+                PDL-space widening without an epicenter, and possible jaw
+                fractures.
+              </td>
+            </tr>
+            <tr>
+              <td>Differential: Periapical Disease</td>
+              <td>Inflammatory disease has an epicenter at the apex.</td>
+            </tr>
+            <tr>
+              <td>Differential: Periodontal Disease</td>
+              <td>Changes are at the alveolar crest.</td>
+            </tr>
+            <tr>
+              <td>Differential: Malignancy</td>
+              <td>Soft tissue mass and irregular bone destruction.</td>
+            </tr>
+            <tr>
+              <td>Detailed Evaluation</td>
+              <td>Use CBCT/MDCT.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Clinical Features and Management</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Clinical Signs</td>
+              <td>
+                Exposed bone, pain, swelling, and drainage; may be asymptomatic.
+              </td>
+            </tr>
+            <tr>
+              <td>Complications</td>
+              <td>Risk of fracture and secondary infection.</td>
+            </tr>
+            <tr>
+              <td>Histopathology</td>
+              <td>
+                Absence of osteocytes in lacunae and loss of mucosal covering.
+              </td>
+            </tr>
+            <tr>
+              <td>Prevention</td>
+              <td>Avoid trauma after radiation.</td>
+            </tr>
+            <tr>
+              <td>Imaging Follow-up</td>
+              <td>Panoramic imaging and CBCT/MDCT.</td>
+            </tr>
+            <tr>
+              <td>Treatment</td>
+              <td>Conservative care and possible surgical intervention.</td>
+            </tr>
+            <tr>
+              <td>Malignancy Surveillance</td>
+              <td>Monitor recurrence with MRI/MDCT.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h1>Medication-Related Osteonecrosis of the Jaw</h1>
+        <h2>Disease Mechanism and Risk Factors</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cause</td>
+              <td>Chemical trauma from medications.</td>
+            </tr>
+            <tr>
+              <td>Key Drugs</td>
+              <td>Bisphosphonates and RANK-L inhibitors.</td>
+            </tr>
+            <tr>
+              <td>Mechanism</td>
+              <td>
+                Inhibits osteoclasts, reducing bone resorption and contributing
+                to necrotic bone exposure, especially after surgery.
+              </td>
+            </tr>
+            <tr>
+              <td>High-Risk Scenarios</td>
+              <td>
+                IV administration; potent aminobisphosphonates; dental
+                extractions, implants, and periodontal surgery.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Clinical and Imaging Features</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Findings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Clinical Presentation</td>
+              <td>
+                Exposed bone after surgery or trauma; common sites are posterior
+                mandible (60%) and maxilla (40%); may be asymptomatic or painful
+                with swelling.
+              </td>
+            </tr>
+            <tr>
+              <td>Imaging Features</td>
+              <td>
+                May resemble osteomyelitis; sequestra formation, widened PDL
+                space, thickened lamina dura, and potentially rapid dramatic
+                changes.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Management and Prevention</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Prevention is Key</td>
+              <td>
+                Dental evaluation before starting IV therapy; remove infection
+                sources to avoid future surgery.
+              </td>
+            </tr>
+            <tr>
+              <td>Treatment Challenges</td>
+              <td>
+                Surgical and hyperbaric oxygen therapy are often ineffective; a
+                long drug half-life, up to 12 years, complicates recovery.
+              </td>
+            </tr>
+            <tr>
+              <td>Symptom Management</td>
+              <td>
+                Antibiotic mouth rinses, systemic antibiotics, and pain control.
+              </td>
+            </tr>
+            <tr>
+              <td>Emerging Therapies</td>
+              <td>Steroids, NSAIDs, and bisphosphonate therapy adjustments.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h1>Pericoronitis</h1>
+        <h2>Disease Mechanism and Clinical Features</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Definition</td>
+              <td>
+                Inflammation of the soft-tissue operculum over a partially
+                erupted tooth.
+              </td>
+            </tr>
+            <tr>
+              <td>Common Site</td>
+              <td>Mandibular third molars in young adults.</td>
+            </tr>
+            <tr>
+              <td>Cause</td>
+              <td>Food and microbial debris trapped under the operculum.</td>
+            </tr>
+            <tr>
+              <td>Symptoms</td>
+              <td>
+                Pain, swelling, trismus, ulcerated operculum, and pain on
+                occlusion.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Imaging Features and Differential Interpretation</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Findings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Imaging Findings</td>
+              <td>
+                May show no changes if confined to soft tissue; bone rarefaction
+                or sclerosis near crown/root; severe cases may resemble
+                osteomyelitis.
+              </td>
+            </tr>
+            <tr>
+              <td>Location</td>
+              <td>Follicular space near embedded crown.</td>
+            </tr>
+            <tr>
+              <td>Periphery</td>
+              <td>Poorly defined with a wide transition zone.</td>
+            </tr>
+            <tr>
+              <td>Differential Diagnosis</td>
+              <td>
+                Dense bone island, fibrous dysplasia, squamous cell carcinoma,
+                and sclerotic osteosarcoma; clinical symptoms help exclude
+                non-inflammatory conditions.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Management and Effects on Surrounding Structures</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Effects on Bone</td>
+              <td>
+                Rarefaction and sclerosis; possible periosteal new bone
+                formation; may extend to sigmoid notch in severe cases.
+              </td>
+            </tr>
+            <tr>
+              <td>Treatment Goal</td>
+              <td>Remove the partially erupted tooth.</td>
+            </tr>
+            <tr>
+              <td>Acute Phase</td>
+              <td>Antibiotics to manage symptoms.</td>
+            </tr>
+            <tr>
+              <td>Definitive Treatment</td>
+              <td>Delayed if trismus is present.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h1>Histopathologic Correlates of Inflammatory Jaw Lesions</h1>
+        <h2>Types of Inflammatory Cells</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Cell Type</th>
+              <th>Histologic Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Neutrophil</td>
+              <td>Multi-lobed nucleus and granular cytoplasm.</td>
+            </tr>
+            <tr>
+              <td>Lymphocyte</td>
+              <td>
+                Large, round, dark nucleus occupying most of the cell, with a
+                thin rim of light blue cytoplasm.
+              </td>
+            </tr>
+            <tr>
+              <td>Plasma Cell</td>
+              <td>
+                Oval shape; eccentric nucleus with condensed chromatin (“clock
+                face”), basophilic cytoplasm, and prominent pale Golgi region
+                near nucleus.
+              </td>
+            </tr>
+            <tr>
+              <td>Histiocyte (Foamy Macrophage)</td>
+              <td>
+                Large cell with foamy/vacuolated cytoplasm containing
+                phagocytosed material; kidney-shaped or oval eccentrically
+                located nucleus.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Histology of Periapical Lesions</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Lesion</th>
+              <th>Histologic Findings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Periapical Abscess</td>
+              <td>
+                Mixture of neutrophils, cellular debris, bacterial colonies, and
+                necrotic debris; foamy histiocytes may be present.
+              </td>
+            </tr>
+            <tr>
+              <td>Periapical Granuloma</td>
+              <td>
+                Granulation tissue containing chronic or subacute inflammation.
+                Chronic lesions contain lymphocytes and plasma cells; subacute
+                lesions contain neutrophils mixed with chronic inflammatory
+                cells. Histiocytes may also be present.
+              </td>
+            </tr>
+            <tr>
+              <td>Periapical Scar</td>
+              <td>
+                Scar tissue replaces normal bone at apex; reparative response to
+                periapical inflammation; hyalinized fibrous connective tissue.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Histology of Osteomyelitis Variants</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Variant</th>
+              <th>Histologic Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Acute Osteomyelitis</td>
+              <td>
+                Necrotic bone with loss of osteocytes in lacunae; ragged bone
+                borders; acute inflammation composed of neutrophils; bacterial
+                colonies present as purple aggregates.
+              </td>
+            </tr>
+            <tr>
+              <td>Chronic Osteomyelitis</td>
+              <td>
+                Granulation tissue between portions of lamellar bone, with
+                chronic or subacute inflammation in the granulation tissue.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Chronic Osteomyelitis with Proliferative Periostitis (“Onion
+                Skin”)
+              </td>
+              <td>
+                Also known as Garre's osteomyelitis. New bone formation and
+                periosteal reaction produce parallel layers of new bone, giving
+                an onion-skin appearance.
+              </td>
+            </tr>
+            <tr>
+              <td>Osteomyelitis with Actinomycosis</td>
+              <td>
+                Sulfur granule containing conglomerated filamentous
+                gram-positive bacilli, surrounded by dense inflammatory cell
+                infiltrates.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Histology of ORN and MRONJ</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Condition</th>
+              <th>Histologic Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Osteoradionecrosis (ORN)</td>
+              <td>
+                Necrotic bone with loss of osteocytes in lacunae and ragged
+                borders; granulation tissue with acute inflammation
+                (neutrophils); missing osteoblastic rimming; scar tissue
+                replacing bone marrow.
+              </td>
+            </tr>
+            <tr>
+              <td>MRONJ</td>
+              <td>
+                The supplied notes end mid-sentence: “Sclerotic bone with
+                features of”.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+      <br />
+      <details>
+        <summary>Lecture 4: Cyst</summary>
+        <!doctype html>
+        <html>
+          <head>
+            <title>Jaw Inflammation, Osteomyelitis and Osteonecrosis</title>
+          </head>
+          <body>
+            <h1>Overview and Pathophysiology of Jaw Inflammation</h1>
+            <table>
+              <thead>
+                <tr>
+                  <th>Aspect</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Prevalence</td>
+                  <td>Most common pathologic condition in the jaws</td>
+                </tr>
+                <tr>
+                  <td>Pathway of Infection</td>
+                  <td>
+                    Teeth create direct pathways for pathogens and irritants to
+                    enter bone.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Body's Response</td>
+                  <td>
+                    Inflammation acts to eliminate pathogens and repair tissue.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Bone Metabolism Balance</td>
+                  <td>
+                    Governed by osteoblastic bone formation versus osteoclastic
+                    bone resorption.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Influencing Factors</td>
+                  <td>
+                    Microbial pathogenicity, host immune response, vascularity,
+                    and time.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Spectrum Concept</td>
+                  <td>
+                    Inflammatory conditions form a spectrum with varied clinical
+                    and radiologic features.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Disease Progression Pathway</td>
+                  <td>
+                    <ul>
+                      <li>Caries or trauma</li>
+                      <li>Necrotic pulp</li>
+                      <li>Apical periodontitis</li>
+                      <li>Acute: periapical abscess, then osteomyelitis</li>
+                      <li>
+                        Chronic: periapical granuloma, then periapical cyst
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>General Clinical Features</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Features</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cardinal Signs of Inflammation</td>
+                  <td>
+                    <ul>
+                      <li>Redness (rubor)</li>
+                      <li>Heat (calor)</li>
+                      <li>Swelling (tumor)</li>
+                      <li>Pain (dolor)</li>
+                      <li>Loss of function (functio laesa)</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Acute Lesions</td>
+                  <td>
+                    Rapid onset, intense pain, fever, and noticeable swelling.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Chronic Lesions</td>
+                  <td>
+                    Slow progression, mild or dull pain, low-grade fever, and
+                    gradual swelling.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h1>General Imaging Features of Jaw Inflammation</h1>
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Characteristics</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Location (Pulpal origin)</td>
+                  <td>Lesion epicenter at tooth apex or along root surface.</td>
+                </tr>
+                <tr>
+                  <td>Location (Periodontal origin)</td>
+                  <td>
+                    Epicenter at alveolar crest; severe cases may involve
+                    furcation.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Location (Osteomyelitis)</td>
+                  <td>
+                    Diffuse, uncontained inflammation; commonly in posterior
+                    mandible.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Periphery</td>
+                  <td>
+                    Ill-defined borders; gradual transition to sclerotic or
+                    radiolucent patterns.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Radiographic Appearance</td>
+                  <td>Radiolucent, radiopaque, or mixed.</td>
+                </tr>
+                <tr>
+                  <td>Acute Disease Progression</td>
+                  <td>Bone resorption dominates, producing radiolucency.</td>
+                </tr>
+                <tr>
+                  <td>Chronic Disease Progression</td>
+                  <td>Bone formation increases, producing radiopacity.</td>
+                </tr>
+                <tr>
+                  <td>Osteomyelitis on Imaging</td>
+                  <td>
+                    Sequestra; ill-defined radiolucent areas with radiopaque
+                    islands of nonvital bone.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Effects on Surrounding Structures</td>
+                  <td>
+                    <ul>
+                      <li>New bone formation produces sclerotic bone.</li>
+                      <li>Bone resorption produces radiolucent areas.</li>
+                      <li>
+                        PDL widening, commonly at apex and alveolar crest.
+                      </li>
+                      <li>Root resorption.</li>
+                      <li>Periosteal bone formation.</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h1>Periapical Inflammatory Lesions</h1>
+            <h2>Terminology and Radiologic Diagnosis</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Terminology Type</th>
+                  <th>Terms / Explanation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Common Clinical Terms</td>
+                  <td>Apical periodontitis, abscess, granuloma, cyst.</td>
+                </tr>
+                <tr>
+                  <td>Histopathologic Diagnosis</td>
+                  <td>
+                    Only microscopic examination can differentiate abscess,
+                    granuloma, and cyst.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Radiologic Term: Rarefying Osteitis</td>
+                  <td>Bone resorption producing radiolucency.</td>
+                </tr>
+                <tr>
+                  <td>Radiologic Term: Sclerosing Osteitis</td>
+                  <td>Bone deposition producing radiopacity.</td>
+                </tr>
+                <tr>
+                  <td>Preferred Terminology</td>
+                  <td>
+                    Use “sclerosis” rather than “condensing/focal sclerosing
+                    osteitis.”
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Disease Mechanism and Pathophysiology</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Aspect</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cause</td>
+                  <td>Pulpal necrosis from caries, trauma, or chemicals.</td>
+                </tr>
+                <tr>
+                  <td>Inflammatory Spread</td>
+                  <td>From apex to surrounding bone and PDL.</td>
+                </tr>
+                <tr>
+                  <td>Acute Progression</td>
+                  <td>Abscess formation.</td>
+                </tr>
+                <tr>
+                  <td>Chronic Progression</td>
+                  <td>Granuloma or cyst formation.</td>
+                </tr>
+                <tr>
+                  <td>Bone Response</td>
+                  <td>
+                    Sclerosis at lesion periphery, periosteal new bone
+                    formation, and sequestrum formation due to compromised blood
+                    supply.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Spread Pathway</td>
+                  <td>
+                    Inflammation spreads through bone via Haversian and Volkmann
+                    canal systems. As it reaches the bone surface through
+                    Volkmann canals, exudate lifts and distends the periosteum.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Clinical and Imaging Examinations</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Findings / Modalities</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Acute Clinical Presentation</td>
+                  <td>Pain, swelling, mobility, and pus drainage.</td>
+                </tr>
+                <tr>
+                  <td>Chronic Clinical Presentation</td>
+                  <td>Asymptomatic or intermittent pain.</td>
+                </tr>
+                <tr>
+                  <td>Imaging Modalities</td>
+                  <td>
+                    Periapical, occlusal, and panoramic images; CBCT/MDCT for
+                    bone changes; MRI for marrow involvement; nuclear medicine
+                    (99mTc, 67Ga) for confirmation.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Imaging Features: Location and Periphery</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Characteristics</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Location</td>
+                  <td>
+                    Typically at the apex or apical third of a tooth root; may
+                    migrate apically as lesion enlarges; may occur at accessory
+                    canals, perforations, or root fractures.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Periphery</td>
+                  <td>
+                    Poorly to moderately defined borders with smooth contour.
+                    Transition zone reflects degree of sclerosis; rarely
+                    corticated or sharply defined.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Imaging Features: Internal Structure and Bone Effects</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Stage</th>
+                  <th>Findings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Early Lesions</td>
+                  <td>May show no visible changes.</td>
+                </tr>
+                <tr>
+                  <td>Initial Signs</td>
+                  <td>PDL widening and loss of lamina dura.</td>
+                </tr>
+                <tr>
+                  <td>Advanced Lesions</td>
+                  <td>Radiolucency at apex and possible sclerosis.</td>
+                </tr>
+                <tr>
+                  <td>Bone Perforation</td>
+                  <td>Through a cloaca.</td>
+                </tr>
+                <tr>
+                  <td>Trabecular Changes</td>
+                  <td>Altered trabecular pattern and marrow space.</td>
+                </tr>
+                <tr>
+                  <td>Sequestrum Formation</td>
+                  <td>
+                    Dense bone with reduced vascularity produces a sequestrum.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Periosteal New Bone Formation</td>
+                  <td>“Halo” or “onion skin” patterns.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Effects on Adjacent Teeth and Air Spaces</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Structure Affected</th>
+                  <th>Imaging/Clinical Findings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Root Effects</td>
+                  <td>
+                    External root resorption produces irregular root contour;
+                    hypercementosis produces bulbous root shape; changes are
+                    asymmetric and nonuniform.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Air Space Involvement</td>
+                  <td>
+                    Inflammation may reach the sinus or nasal floor and
+                    stimulate mucosal thickening (mucositis).
+                  </td>
+                </tr>
+                <tr>
+                  <td>Deciduous Teeth</td>
+                  <td>
+                    May disrupt eruption of permanent teeth and displace
+                    developing dentition.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Differential Interpretation</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Condition</th>
+                  <th>Key Distinguishing Features</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PCOD (Periapical Cemento-Osseous Dysplasia)</td>
+                  <td>
+                    Early radiolucent stage mimics inflammation; tooth is vital.
+                    Mature stage shows central radiopacity within radiolucency.
+                    Root changes are hypercementosis, not resorption.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Periapical Inflammatory Disease</td>
+                  <td>
+                    Tooth is nonvital; radiopacity is at lesion periphery; root
+                    changes are external resorption.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Dense Bone Island</td>
+                  <td>
+                    May mimic sclerosis; no PDL space alteration, tooth remains
+                    vital, and there is a narrow transition zone to normal bone.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Malignancy (for example, leukemia)</td>
+                  <td>
+                    Rarely may involve apical PDL space; multiple areas of
+                    cancellous bone destruction require further imaging and
+                    clinical correlation.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Persistent Periapical Inflammatory Disease</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Aspect</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Causes of Persistence</td>
+                  <td>
+                    Inadequate endodontic treatment, untreated canal, root
+                    perforation, or fracture.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Imaging Clues</td>
+                  <td>
+                    Recurring radiolucency with hydraulic periphery; CBCT is
+                    useful for identifying root fractures or missed canals.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Management</td>
+                  <td>
+                    Retreatment or periapical surgery; extraction if root
+                    fracture is confirmed.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h1>Osteomyelitis</h1>
+            <h2>Overview and Disease Mechanism</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Aspect</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Definition</td>
+                  <td>Inflammation involving bone marrow.</td>
+                </tr>
+                <tr>
+                  <td>Progression</td>
+                  <td>More severe form of periapical inflammatory disease.</td>
+                </tr>
+                <tr>
+                  <td>Risk Factors</td>
+                  <td>
+                    Immunosuppression, systemic disease, and poor vascularity.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Mechanism of Spread</td>
+                  <td>From a nonvital tooth or hematogenous origin.</td>
+                </tr>
+                <tr>
+                  <td>Acute Histology</td>
+                  <td>Neutrophilic infiltrate.</td>
+                </tr>
+                <tr>
+                  <td>Chronic Histology</td>
+                  <td>Fibrosis and mononuclear cells.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Clinical and Imaging Features</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Acute</th>
+                  <th>Chronic</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Clinical Features</td>
+                  <td>
+                    Pain, swelling, fever, lymphadenopathy, and paresthesia.
+                  </td>
+                  <td>
+                    Intermittent symptoms, fistula, and possible absence of
+                    symptoms.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Imaging Features</td>
+                  <td>Sclerosis, cloaca, and periosteal new bone formation.</td>
+                  <td>
+                    Sequestra; “onion skin” or “proliferative periostitis” in
+                    children.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Imaging Modalities</td>
+                  <td>
+                    Periapical, panoramic, and occlusal images; CBCT/MDCT for
+                    bone changes; MRI for marrow; 99mTc and 67Ga for
+                    inflammation.
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Location, Periphery and Progression</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Characteristics</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Location</td>
+                  <td>
+                    Most common in posterior mandible and rare in maxilla.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Periphery (Acute)</td>
+                  <td>Poorly defined and noncorticated.</td>
+                </tr>
+                <tr>
+                  <td>Periphery (Chronic)</td>
+                  <td>Better defined with a sclerotic transition zone.</td>
+                </tr>
+                <tr>
+                  <td>Progression</td>
+                  <td>
+                    Cortical bone resorption stimulates periosteum and creates
+                    new bone layers; multiple “onion skin” layers may occur in
+                    children.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Internal Structure</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Phase</th>
+                  <th>Imaging Findings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Acute Phase</td>
+                  <td>
+                    Decreased bone density, loss of trabecular definition, and
+                    focal radiolucencies in scattered regions.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Chronic Phase</td>
+                  <td>Increased bone density producing uniform radiopacity.</td>
+                </tr>
+                <tr>
+                  <td>Sequestra Appearance</td>
+                  <td>
+                    Radiopaque bone fragments surrounded by a radiolucent halo.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Best Imaging Tools</td>
+                  <td>
+                    CBCT/MDCT are superior for detecting sequestra and dense
+                    bone changes.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Effects on Surrounding Structures, Teeth and Soft Tissue</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Findings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Periosteal Reaction</td>
+                  <td>
+                    New bone forms in elevated periosteum; granular or sclerotic
+                    bone pattern develops.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Advanced Bone Changes</td>
+                  <td>
+                    Loss of original cortex visibility, bony asymmetry, surface
+                    contour changes, and cloaca formation.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Spread</td>
+                  <td>
+                    May involve TMJ, causing septic arthritis; may extend to
+                    mastoid air cells and inner ear.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Tooth Effects</td>
+                  <td>
+                    External root resorption, hypercementosis, and widened PDL
+                    space against sclerotic bone.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Soft Tissue Imaging (MDCT + contrast)</td>
+                  <td>“Fat streaking.”</td>
+                </tr>
+                <tr>
+                  <td>Soft Tissue Imaging (MRI + gadolinium)</td>
+                  <td>
+                    Edema, abscess, and lymphadenopathy; abscess has low
+                    attenuation center with enhanced border.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Differential Diagnosis</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Condition</th>
+                  <th>Distinguishing Features</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Osteomyelitis</td>
+                  <td>
+                    Periosteal new bone formation; sequestra present; cortex may
+                    be indistinct in chronic phase.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Fibrous Dysplasia</td>
+                  <td>
+                    Bone enlarges from within; cortex remains intact but
+                    thinned; no sequestra.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Key Differentiator</td>
+                  <td>Location and origin of new bone formation.</td>
+                </tr>
+                <tr>
+                  <td>Malignancy</td>
+                  <td>
+                    May mimic acute osteomyelitis and may be secondarily
+                    infected; destruction of adjacent structures, soft tissue
+                    mass, and rapid growth suggest malignancy.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Langerhans Cell Histiocytosis</td>
+                  <td>Radiolucent with no sclerosis.</td>
+                </tr>
+                <tr>
+                  <td>Ewing Sarcoma</td>
+                  <td>“Onion skin” periosteal reaction.</td>
+                </tr>
+                <tr>
+                  <td>Osteosarcoma/Chondrosarcoma</td>
+                  <td>Intralesional bone formation.</td>
+                </tr>
+                <tr>
+                  <td>Paget Disease</td>
+                  <td>Bilateral mandibular involvement and no sequestra.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Chronic Variants and Syndromic Mimics</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Condition</th>
+                  <th>Features</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Chronic Osteomyelitis</td>
+                  <td>
+                    May evolve from acute phase; cultures may be negative in
+                    chronic stage.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Primary Chronic Osteomyelitis</td>
+                  <td>
+                    No identifiable pathogen; similar to CRMO and SAPHO
+                    syndrome.
+                  </td>
+                </tr>
+                <tr>
+                  <td>SAPHO Syndrome</td>
+                  <td>
+                    Synovitis, acne, pustulosis, hyperostosis, and osteitis;
+                    imaging shows sclerosis and swelling with negative cultures.
+                  </td>
+                </tr>
+                <tr>
+                  <td>CRMO</td>
+                  <td>
+                    Chronic recurrent multifocal osteomyelitis: symmetric
+                    long-bone involvement in children; nonpurulent and
+                    culture-negative. Jaw involvement may be a unifocal variant.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Management</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Approach</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Acute</td>
+                  <td>Remove source, antibiotics, and surgical drainage.</td>
+                </tr>
+                <tr>
+                  <td>Chronic</td>
+                  <td>
+                    May require sequestrectomy, decortication, or resection.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Antibiotic Limitations</td>
+                  <td>Antibiotics have limited success in sclerotic bone.</td>
+                </tr>
+                <tr>
+                  <td>Alternative Therapies</td>
+                  <td>Steroids, NSAIDs, and bisphosphonates.</td>
+                </tr>
+                <tr>
+                  <td>Additional Therapy</td>
+                  <td>Hyperbaric oxygen therapy in select cases.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h1>Radiation-Induced Bone Changes and Osteoradionecrosis</h1>
+            <h2>Mechanism and Effects</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Aspect</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cause</td>
+                  <td>Therapeutic radiation for head and neck malignancies.</td>
+                </tr>
+                <tr>
+                  <td>Cellular Damage</td>
+                  <td>
+                    Damage to DNA, proteins, and lipids causes impaired cell
+                    function or death.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Low Dose (1–4 Gy)</td>
+                  <td>Osteoblast stimulation and sclerosis.</td>
+                </tr>
+                <tr>
+                  <td>Moderate Dose (10–20 Gy)</td>
+                  <td>Cell death and growth retardation.</td>
+                </tr>
+                <tr>
+                  <td>High Dose (60–70 Gy)</td>
+                  <td>Mature bone damage.</td>
+                </tr>
+                <tr>
+                  <td>Vascular Injury</td>
+                  <td>Hypovascular, hypoxic bone with impaired healing.</td>
+                </tr>
+                <tr>
+                  <td>Outcome</td>
+                  <td>Osteoradionecrosis: bone death due to radiation.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Imaging Features and Differential Interpretation</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Findings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Early Imaging</td>
+                  <td>No visible changes.</td>
+                </tr>
+                <tr>
+                  <td>Later Imaging</td>
+                  <td>
+                    Cortical bone resorption, sclerosis, sequestra, uniform
+                    PDL-space widening without an epicenter, and possible jaw
+                    fractures.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Differential: Periapical Disease</td>
+                  <td>Inflammatory disease has an epicenter at the apex.</td>
+                </tr>
+                <tr>
+                  <td>Differential: Periodontal Disease</td>
+                  <td>Changes are at the alveolar crest.</td>
+                </tr>
+                <tr>
+                  <td>Differential: Malignancy</td>
+                  <td>Soft tissue mass and irregular bone destruction.</td>
+                </tr>
+                <tr>
+                  <td>Detailed Evaluation</td>
+                  <td>Use CBCT/MDCT.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Clinical Features and Management</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Aspect</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Clinical Signs</td>
+                  <td>
+                    Exposed bone, pain, swelling, and drainage; may be
+                    asymptomatic.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Complications</td>
+                  <td>Risk of fracture and secondary infection.</td>
+                </tr>
+                <tr>
+                  <td>Histopathology</td>
+                  <td>
+                    Absence of osteocytes in lacunae and loss of mucosal
+                    covering.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Prevention</td>
+                  <td>Avoid trauma after radiation.</td>
+                </tr>
+                <tr>
+                  <td>Imaging Follow-up</td>
+                  <td>Panoramic imaging and CBCT/MDCT.</td>
+                </tr>
+                <tr>
+                  <td>Treatment</td>
+                  <td>Conservative care and possible surgical intervention.</td>
+                </tr>
+                <tr>
+                  <td>Malignancy Surveillance</td>
+                  <td>Monitor recurrence with MRI/MDCT.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h1>Medication-Related Osteonecrosis of the Jaw</h1>
+            <h2>Disease Mechanism and Risk Factors</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Aspect</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cause</td>
+                  <td>Chemical trauma from medications.</td>
+                </tr>
+                <tr>
+                  <td>Key Drugs</td>
+                  <td>Bisphosphonates and RANK-L inhibitors.</td>
+                </tr>
+                <tr>
+                  <td>Mechanism</td>
+                  <td>
+                    Inhibits osteoclasts, reducing bone resorption and
+                    contributing to necrotic bone exposure, especially after
+                    surgery.
+                  </td>
+                </tr>
+                <tr>
+                  <td>High-Risk Scenarios</td>
+                  <td>
+                    IV administration; potent aminobisphosphonates; dental
+                    extractions, implants, and periodontal surgery.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Clinical and Imaging Features</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Findings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Clinical Presentation</td>
+                  <td>
+                    Exposed bone after surgery or trauma; common sites are
+                    posterior mandible (60%) and maxilla (40%); may be
+                    asymptomatic or painful with swelling.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Imaging Features</td>
+                  <td>
+                    May resemble osteomyelitis; sequestra formation, widened PDL
+                    space, thickened lamina dura, and potentially rapid dramatic
+                    changes.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Management and Prevention</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Aspect</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Prevention is Key</td>
+                  <td>
+                    Dental evaluation before starting IV therapy; remove
+                    infection sources to avoid future surgery.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Treatment Challenges</td>
+                  <td>
+                    Surgical and hyperbaric oxygen therapy are often
+                    ineffective; a long drug half-life, up to 12 years,
+                    complicates recovery.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Symptom Management</td>
+                  <td>
+                    Antibiotic mouth rinses, systemic antibiotics, and pain
+                    control.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Emerging Therapies</td>
+                  <td>
+                    Steroids, NSAIDs, and bisphosphonate therapy adjustments.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h1>Pericoronitis</h1>
+            <h2>Disease Mechanism and Clinical Features</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Aspect</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Definition</td>
+                  <td>
+                    Inflammation of the soft-tissue operculum over a partially
+                    erupted tooth.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Common Site</td>
+                  <td>Mandibular third molars in young adults.</td>
+                </tr>
+                <tr>
+                  <td>Cause</td>
+                  <td>
+                    Food and microbial debris trapped under the operculum.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Symptoms</td>
+                  <td>
+                    Pain, swelling, trismus, ulcerated operculum, and pain on
+                    occlusion.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Imaging Features and Differential Interpretation</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Findings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Imaging Findings</td>
+                  <td>
+                    May show no changes if confined to soft tissue; bone
+                    rarefaction or sclerosis near crown/root; severe cases may
+                    resemble osteomyelitis.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Location</td>
+                  <td>Follicular space near embedded crown.</td>
+                </tr>
+                <tr>
+                  <td>Periphery</td>
+                  <td>Poorly defined with a wide transition zone.</td>
+                </tr>
+                <tr>
+                  <td>Differential Diagnosis</td>
+                  <td>
+                    Dense bone island, fibrous dysplasia, squamous cell
+                    carcinoma, and sclerotic osteosarcoma; clinical symptoms
+                    help exclude non-inflammatory conditions.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Management and Effects on Surrounding Structures</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Aspect</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Effects on Bone</td>
+                  <td>
+                    Rarefaction and sclerosis; possible periosteal new bone
+                    formation; may extend to sigmoid notch in severe cases.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Treatment Goal</td>
+                  <td>Remove the partially erupted tooth.</td>
+                </tr>
+                <tr>
+                  <td>Acute Phase</td>
+                  <td>Antibiotics to manage symptoms.</td>
+                </tr>
+                <tr>
+                  <td>Definitive Treatment</td>
+                  <td>Delayed if trismus is present.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h1>Histopathologic Correlates of Inflammatory Jaw Lesions</h1>
+            <h2>Types of Inflammatory Cells</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Cell Type</th>
+                  <th>Histologic Features</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Neutrophil</td>
+                  <td>Multi-lobed nucleus and granular cytoplasm.</td>
+                </tr>
+                <tr>
+                  <td>Lymphocyte</td>
+                  <td>
+                    Large, round, dark nucleus occupying most of the cell, with
+                    a thin rim of light blue cytoplasm.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Plasma Cell</td>
+                  <td>
+                    Oval shape; eccentric nucleus with condensed chromatin
+                    (“clock face”), basophilic cytoplasm, and prominent pale
+                    Golgi region near nucleus.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Histiocyte (Foamy Macrophage)</td>
+                  <td>
+                    Large cell with foamy/vacuolated cytoplasm containing
+                    phagocytosed material; kidney-shaped or oval eccentrically
+                    located nucleus.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Histology of Periapical Lesions</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Lesion</th>
+                  <th>Histologic Findings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Periapical Abscess</td>
+                  <td>
+                    Mixture of neutrophils, cellular debris, bacterial colonies,
+                    and necrotic debris; foamy histiocytes may be present.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Periapical Granuloma</td>
+                  <td>
+                    Granulation tissue containing chronic or subacute
+                    inflammation. Chronic lesions contain lymphocytes and plasma
+                    cells; subacute lesions contain neutrophils mixed with
+                    chronic inflammatory cells. Histiocytes may also be present.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Periapical Scar</td>
+                  <td>
+                    Scar tissue replaces normal bone at apex; reparative
+                    response to periapical inflammation; hyalinized fibrous
+                    connective tissue.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Histology of Osteomyelitis Variants</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Variant</th>
+                  <th>Histologic Features</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Acute Osteomyelitis</td>
+                  <td>
+                    Necrotic bone with loss of osteocytes in lacunae; ragged
+                    bone borders; acute inflammation composed of neutrophils;
+                    bacterial colonies present as purple aggregates.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Chronic Osteomyelitis</td>
+                  <td>
+                    Granulation tissue between portions of lamellar bone, with
+                    chronic or subacute inflammation in the granulation tissue.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Chronic Osteomyelitis with Proliferative Periostitis (“Onion
+                    Skin”)
+                  </td>
+                  <td>
+                    Also known as Garre's osteomyelitis. New bone formation and
+                    periosteal reaction produce parallel layers of new bone,
+                    giving an onion-skin appearance.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Osteomyelitis with Actinomycosis</td>
+                  <td>
+                    Sulfur granule containing conglomerated filamentous
+                    gram-positive bacilli, surrounded by dense inflammatory cell
+                    infiltrates.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Histology of ORN and MRONJ</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Condition</th>
+                  <th>Histologic Features</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Osteoradionecrosis (ORN)</td>
+                  <td>
+                    Necrotic bone with loss of osteocytes in lacunae and ragged
+                    borders; granulation tissue with acute inflammation
+                    (neutrophils); missing osteoblastic rimming; scar tissue
+                    replacing bone marrow.
+                  </td>
+                </tr>
+                <tr>
+                  <td>MRONJ</td>
+                  <td>
+                    The supplied notes end mid-sentence: “Sclerotic bone with
+                    features of”.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </body>
+        </html>
+      </details>
+    </div>
+    <style>
+      /* same as before */
+      .blurred {
+        filter: blur(10px);
+        transition: filter 0.3s ease;
+      }
+
+      /* Make clickable cursor for td */
+      table td:not(:first-child) {
+        cursor: pointer;
+      }
+
+      /* li inside blurred td will inherit blur from parent */
+      table td.blurred li {
+        filter: inherit;
+      }
+
+      .blur-buttons {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      .blur-buttons button {
+        margin: 0 5px;
+        padding: 5px 12px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .blur-section li {
+        cursor: pointer;
+        margin-bottom: 6px;
+      }
+
+      /* Blur effect same as td */
+      .blur-section li.blurred {
+        filter: blur(10px);
+        transition: filter 0.3s ease;
+      }
+
+      /* Override for bold text so it always stays clear */
+      .blur-section li.blurred b {
+        filter: none !important;
+      }
+
+      .blur-section .blur-target {
+        cursor: pointer;
+        display: inline-block;
+      }
+
+      .blurred {
+        filter: blur(10px);
+        transition: filter 0.3s ease;
+      }
+    </style>
+    <script>
+      // === BLUR LOGIC (delegated for reliability after resets) ===
+      document.addEventListener("DOMContentLoaded", () => {
+        // Delegated click: blur targets
+        document.addEventListener("click", (e) => {
+          const target = e.target;
+          // Blur targets: any table td except first-child, or elements with class 'blur-target'
+          const blurTarget =
+            target.closest("td:not(:first-child)") ||
+            target.closest(".blur-target");
+          if (blurTarget) {
+            blurTarget.classList.toggle("blurred");
+          }
+        });
+
+        // Space toggles all blurables
+        document.addEventListener("keydown", (event) => {
+          if (event.code === "Space") {
+            const blurCells = document.querySelectorAll(
+              "table td:not(:first-child), .blur-section .blur-target",
+            );
+            const allBlurred = Array.from(blurCells).every((cell) =>
+              cell.classList.contains("blurred"),
+            );
+            blurCells.forEach((cell) => {
+              if (allBlurred) cell.classList.remove("blurred");
+              else cell.classList.add("blurred");
+            });
+            event.preventDefault();
+          }
+        });
+
+        // Buttons (if present)
+        const blurAllBtn = document.getElementById("blurAll");
+        const unblurAllBtn = document.getElementById("unblurAll");
+        if (blurAllBtn) {
+          blurAllBtn.addEventListener("click", () => {
+            document
+              .querySelectorAll(
+                "table td:not(:first-child), .blur-section .blur-target",
+              )
+              .forEach((el) => el.classList.add("blurred"));
+          });
+        }
+        if (unblurAllBtn) {
+          unblurAllBtn.addEventListener("click", () => {
+            document
+              .querySelectorAll(
+                "table td:not(:first-child), .blur-section .blur-target",
+              )
+              .forEach((el) => el.classList.remove("blurred"));
+          });
+        }
+      });
+
+      // === CUSTOM HEADER ELEMENT (unchanged) ===
+      class MyHeader extends HTMLElement {
+        connectedCallback() {
+          const text = this.innerHTML.trim() || "Section Title";
+
+          this.innerHTML = `
+        <div
+          style="
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            --tooltip-img-width: 400px;
+          "
+        >
+          ${text}
+        </div>
+        <br />
+      `;
+        }
+      }
+      customElements.define("my-header", MyHeader);
+
+      // === PASSWORD CHECK (unchanged) ===
+      function checkPassword() {
+        const enteredPassword = document.getElementById("password").value;
+        const correctPassword = "";
+        if (enteredPassword === correctPassword) {
+          document.getElementById("content").style.display = "block";
+          document.querySelector("h2").style.display = "none";
+          document.querySelector("p").style.display = "none";
+          document.getElementById("password").style.display = "none";
+          event.target.style.display = "none";
+        } else {
+          alert("Incorrect password. Please try again.");
+        }
+      }
+
+      // === SHUFFLE LOGIC (per-table inside details blocks) ===
+      function shuffleRowsInTable(table) {
+        const tbody = table.querySelector("tbody");
+        if (!tbody) return;
+
+        const rows = Array.from(tbody.querySelectorAll("tr"));
+        if (rows.length <= 1) return;
+
+        // Detach all rows
+        rows.forEach((row) => tbody.removeChild(row));
+
+        // Fisher-Yates shuffle
+        for (let i = rows.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [rows[i], rows[j]] = [rows[j], rows[i]];
+        }
+
+        // Re-attach in new order
+        for (const row of rows) tbody.appendChild(row);
+      }
+
+      /* Capture the original order of rows for all tables inside details blocks (on page load) */
+      function captureOriginalOrder() {
+        const data = new Map();
+        document.querySelectorAll("details table").forEach((tbl) => {
+          const tbody = tbl.querySelector("tbody");
+          if (!tbody) return;
+          const order = Array.from(tbody.querySelectorAll("tr")).map((tr) =>
+            tr.cloneNode(true),
+          );
+          data.set(tbl, order);
+        });
+        return data;
+      }
+
+      /* Restore original order for all tables inside details blocks */
+      function resetTablesToOriginal(orderMap) {
+        orderMap.forEach((originalRows, tbl) => {
+          const tbody = tbl.querySelector("tbody");
+          if (!tbody) return;
+          // Remove current rows
+          const current = Array.from(tbody.querySelectorAll("tr"));
+          current.forEach((row) => tbody.removeChild(row));
+
+          // Append copies in original order
+          originalRows.forEach((row) => tbody.appendChild(row.cloneNode(true)));
+        });
+      }
+
+      /* Shuffle every table inside every details block independently */
+      function shuffleAllTablesInDetails() {
+        const detailsBlocks = document.querySelectorAll("details");
+        detailsBlocks.forEach((det) => {
+          det.querySelectorAll("table").forEach((tbl) => {
+            shuffleRowsInTable(tbl);
+          });
+        });
+      }
+
+      /* Wire up UI and keyboard shortcuts (Z to shuffle, X to reset) */
+      document.addEventListener("DOMContentLoaded", () => {
+        // Prepare original order snapshot
+        const originalOrder = captureOriginalOrder();
+
+        // Button handlers
+        const btnShuffle = document.getElementById("shuffleAllTables");
+        if (btnShuffle) {
+          btnShuffle.addEventListener("click", () => {
+            shuffleAllTablesInDetails();
+          });
+        }
+
+        const btnReset = document.getElementById("resetTables");
+        if (btnReset) {
+          btnReset.addEventListener("click", () => {
+            resetTablesToOriginal(originalOrder);
+          });
+        }
+
+        const btnToggleDetails = document.getElementById("toggleDetails");
+
+        if (btnToggleDetails) {
+          btnToggleDetails.addEventListener("click", () => {
+            const detailsBlocks = Array.from(
+              document.querySelectorAll("details"),
+            );
+            const allOpen = detailsBlocks.every((details) => details.open);
+
+            detailsBlocks.forEach((details) => {
+              details.open = !allOpen;
+            });
+          });
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener("keydown", (event) => {
+          const key = event.key.toLowerCase();
+          if (key === "z") {
+            shuffleAllTablesInDetails();
+            event.preventDefault();
+          } else if (key === "x") {
+            resetTablesToOriginal(originalOrder);
+            event.preventDefault();
+          } else if (key === "e") {
+            const detailsBlocks = Array.from(
+              document.querySelectorAll("details"),
+            );
+            const allOpen = detailsBlocks.every((details) => details.open);
+
+            detailsBlocks.forEach((details) => {
+              details.open = !allOpen;
+            });
+
+            event.preventDefault();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
